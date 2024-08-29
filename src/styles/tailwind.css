@@ -1,0 +1,33 @@
+/* index.css */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Custom Utilities */
+.btn-primary {
+  @apply bg-primary text-white py-2 px-4 rounded hover:bg-opacity-90 transition;
+}
+
+.btn-secondary {
+  @apply bg-secondary text-white py-2 px-4 rounded hover:bg-opacity-90 transition;
+}
+
+.text-shadow {
+  text-shadow: 0px 4px 10px rgba(0, 0, 0, 0.25);
+}
+
+.card {
+  @apply bg-lightBackground dark:bg-darkBackground text-lightText dark:text-darkText p-6 rounded-xl shadow-lg;
+}
+
+.flex-center {
+  @apply flex justify-center items-center;
+}
+
+.grid-cols-2 {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+.grid-cols-3 {
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+}
