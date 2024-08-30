@@ -1,10 +1,60 @@
-import React from 'react'
+import React, { useState } from "react"
+import { tools } from "../constants"
 
-const ToolSection = () => {
+const ToolSection = ({ isDarkMode }) => {
+  const [activeTool, setActiveTool] = useState(tools[0])
+
   return (
-    <div>
-      ToolSection
-    </div>
+    <main className="flex justify-center flex-col md:flex-row items-center gap-5 flex-wrap mt-40">
+      <section className="max-w-lg border-l-2 p-10 border-slate-700 relative cursor-pointer">
+        <span className="absolute left-0 top-0 w-10 border-t-2 pl-5 border-slate-700"></span>
+        <h1 className="text-2xl">TOOLS</h1>
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-10 mt-5 ">
+          {tools.map((tool) => (
+            <div
+              key={tool.id}
+              onClick={() => setActiveTool(tool)}
+              className={`flex items-center gap-5 shadow-md p-4  ${
+                isDarkMode ? "shadow-gray-400" : "shadow-gray-950"
+              } font-bold`}
+            >
+              <div>
+                <img src={tool.icon} alt="" className="w-16" />
+              </div>
+              <div>
+                <h2 className="text-gray-500">Hardhat</h2>
+                <h2>{tool.name}</h2>
+              </div>
+            </div>
+          ))}
+        </div>
+        <span className="absolute left-0 bottom-0 w-10 border-t-2 pl-5 border-slate-700"></span>
+      </section>
+      <section className="hidden md:block max-w-md border-l-2 py-28  border-slate-700 relative"></section>
+      <section className="block md:hidden max-w-md border-t-2 px-28  border-slate-700 relative"></section>
+      <section className="max-w-lg border-r-2 p-10 border-slate-700 relative">
+        <span className="absolute right-0 top-0 w-10 border-t-2 pl-5 border-slate-700"></span>
+        <div className="">
+          <div className="flex flex-col md:flex-row gap-2 font-bold items-center">
+            <h2 className="text-gray-500 text-2xl">Hardhat</h2>
+            <h2 className="text-2xl">{activeTool.name}</h2>
+            <h2 className="bg-[#F8F4CB] text-gray-500 text-md px-3 py-1 rounded-tl-lg rounded-br-md">
+              {activeTool.tag}
+            </h2>
+          </div>
+          <p className="mt-4 text-gray-500 w-56 md:w-full">
+            {activeTool.description}
+          </p>
+          <a
+            href="#"
+            className="mt-4 inline-block hover:underline text-gray-500"
+          >
+            Learn more →
+          </a>
+        </div>
+        <span className="absolute right-0 bottom-0 w-10 border-t-2 pl-5 border-slate-700"></span>
+      </section>
+    </main>
   )
 }
 

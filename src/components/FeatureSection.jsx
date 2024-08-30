@@ -1,10 +1,10 @@
-import React from 'react'
+import React from "react"
 
 const FeatureSection = () => {
   return (
-    <div>
-      FeatureSection
-    </div>
+    <main>
+      <h1>Why hardhat?</h1>
+    </main>
   )
 }
 

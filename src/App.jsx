@@ -8,21 +8,18 @@ const App = () => {
 
   const toggleTheme = () => {
     setIsDarkMode(!isDarkMode)
-    console.log("Theme toggled")
   }
 
   return (
     <main
       className={`${
-        isDarkMode
-          ? "bg-lightBackground text-darkText"
-          : "bg-darkBackground text-lightText"
-      } font-sans transition-all duration-300`}
+        isDarkMode ? "light-mode" : "dark-mode"
+      } font-sans transition-all duration-300 min-h-screen`}
     >
       <Router>
         <Navbar isDarkMode={isDarkMode} toggleTheme={toggleTheme} />
         <Routes>
-          <Route path="/" element={<Home />} />
+          <Route path="/" element={<Home isDarkMode={isDarkMode} />} />
           <Route path="/plugins" element={<Plugins />} />
           <Route path="/docs" element={<Docs />} />
           <Route path="/tutorial" element={<Tutorial />} />

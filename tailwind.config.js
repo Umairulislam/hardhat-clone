@@ -5,7 +5,7 @@ export default {
   theme: {
     extend: {
       colors: {
-        primary: "#FFFFFF", // Yellow color used in Hardhat
+        primary: "#FFF100", // Yellow color used button
         secondary: "#121212", // Dark background color
         darkBackground: "#181A1F", // Background color for dark mode
         lightBackground: "#FFFFFF", // Light background for light mode
@@ -18,12 +18,10 @@ export default {
         mono: ["Fira Code", "monospace"], // Monospace font for code snippets
       },
       screens: {
-        xs: "480px", // Extra small screen
-        sm: "640px", // Small screen
+        sm: "425px", // small screen
         md: "768px", // Medium screen
         lg: "1024px", // Large screen
         xl: "1280px", // Extra large screen
-        "2xl": "1536px", // 2XL screen
       },
       spacing: {
         18: "4.5rem", // Custom spacing
