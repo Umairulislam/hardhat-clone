@@ -8,7 +8,7 @@ const ToolSection = ({ isDarkMode }) => {
     <main className="flex justify-center flex-col md:flex-row items-center gap-5 flex-wrap mt-40">
       <section className="max-w-lg border-l-2 p-10 border-slate-700 relative cursor-pointer">
         <span className="absolute left-0 top-0 w-10 border-t-2 pl-5 border-slate-700"></span>
-        <h1 className="text-2xl">TOOLS</h1>
+        <h1 className="text-2xl tracking-widest">TOOLS</h1>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-10 mt-5 ">
           {tools.map((tool) => (
             <div

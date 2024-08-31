@@ -1,5 +1,10 @@
 import React from "react"
-import { HeroSection, ToolSection, FeatureSection } from "../components"
+import {
+  HeroSection,
+  ToolSection,
+  WhyHardhat,
+  CommunitySection,
+} from "../components"
 
 const Home = ({ isDarkMode }) => {
   console.log(isDarkMode)
@@ -7,7 +12,8 @@ const Home = ({ isDarkMode }) => {
     <main className="custom-padding">
       <HeroSection isDarkMode={isDarkMode} />
       <ToolSection isDarkMode={isDarkMode} />
-      <FeatureSection isDarkMode={isDarkMode} />
+      <WhyHardhat isDarkMode={isDarkMode} />
+      <CommunitySection isDarkMode={isDarkMode} />
     </main>
   )
 }
