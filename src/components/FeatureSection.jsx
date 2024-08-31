@@ -20,11 +20,11 @@ const FeatureSection = ({
       </div>
       <div className="max-w-md w-full flex flex-col items-start gap-10">
         <div>
-          <h1 className="md:text-4xl text-2xl font-bold">{title1}</h1>
+          <h1 className="secondary-heading">{title1}</h1>
           <p className="mt-5 text-gray-500">{content1}</p>
         </div>
         <div>
-          <h1 className="md:text-4xl text-2xl font-bold">{title2}</h1>
+          <h1 className="secondary-heading">{title2}</h1>
           <p className="mt-5 text-gray-500">{content2}</p>
         </div>
         <div>

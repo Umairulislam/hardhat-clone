@@ -16,7 +16,7 @@ const WhyHardhat = ({ isDarkMode }) => {
     <main className="mt-40 ">
       <section className="flex justify-center items-center gap-6 relative text-center flex-wrap">
         <div className="max-w-sm border-t-2 border-l-2 w-full h-12  border-slate-700"></div>
-        <h1 className="text-2xl tracking-widest uppercase font-medium h-20">
+        <h1 className="primary-heading h-20">
           why hardhat
         </h1>
         <div className="max-w-sm border-t-2 border-r-2 w-full h-12  border-slate-700"></div>

@@ -1,4 +1,15 @@
-import { compile, deploy, debug, code } from "../assets"
+import {
+  compile,
+  deploy,
+  debug,
+  code,
+  decentraland,
+  openzeppelin,
+  optimism,
+  opyn,
+  poap,
+  set,
+} from "../assets"
 
 const tools = [
   {
@@ -35,4 +46,37 @@ const tools = [
   },
 ]
 
-export { tools }
+const brands = [
+  {
+    id: 1,
+    name: "Decentraland",
+    icon: decentraland,
+  },
+  {
+    id: 2,
+    name: "OpenZeppelin",
+    icon: openzeppelin,
+  },
+  {
+    id: 3,
+    name: "Optimism",
+    icon: optimism,
+  },
+  {
+    id: 4,
+    name: "Opyn",
+    icon: opyn,
+  },
+  {
+    id: 5,
+    name: "POAP",
+    icon: poap,
+  },
+  {
+    id: 6,
+    name: "Set",
+    icon: set,
+  },
+]
+
+export { tools, brands }

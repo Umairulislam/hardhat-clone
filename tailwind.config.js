@@ -6,7 +6,7 @@ export default {
     extend: {
       colors: {
         primary: "#FFF100", // Yellow color used button
-        secondary: "#121212", // Dark background color
+        secondary: "#20232A", // Dark background color on community section
         darkBackground: "#181A1F", // Background color for dark mode
         lightBackground: "#FFFFFF", // Light background for light mode
         darkText: "#181A1F", // Light text for dark mode
@@ -23,19 +23,9 @@ export default {
         lg: "1024px", // Large screen
         xl: "1280px", // Extra large screen
       },
-      spacing: {
-        18: "4.5rem", // Custom spacing
-        22: "5.5rem", // Custom spacing
-      },
       border: {
         darkBorder: "1px solid #121212", // Dark border color
         lightBorder: "1px solid #FFFFFF", // Light border color
-      },
-      borderRadius: {
-        xl: "1rem", // Custom border radius
-      },
-      zIndex: {
-        "-10": "-10", // Custom negative z-index
       },
     },
   },

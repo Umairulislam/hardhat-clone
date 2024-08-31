@@ -24,6 +24,14 @@ import iterationDark from "./iteration-dark.svg"
 import iterationLight from "./iteration-light.svg"
 import solidityDark from "./solidity-dark.svg"
 import solidityLight from "./solidity-light.svg"
+import communityDark from "./community-dark.svg"
+import communityLight from "./community-light.svg"
+import decentraland from "./decentraland.webp"
+import openzeppelin from "./openzeppelin.webp"
+import optimism from "./optimism.webp"
+import opyn from "./opyn.webp"
+import poap from "./poap.webp"
+import set from "./set.webp"
 
 export {
   logolight,
@@ -52,4 +60,12 @@ export {
   iterationLight,
   solidityDark,
   solidityLight,
+  communityDark,
+  communityLight,
+  decentraland,
+  openzeppelin,
+  optimism,
+  opyn,
+  poap,
+  set,
 }

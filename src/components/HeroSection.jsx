@@ -10,9 +10,9 @@ import {
 
 const HeroSection = ({ isDarkMode }) => {
   return (
-    <main className="flex justify-around items-center gap-10 flex-wrap">
+    <main className="flex justify-center items-center gap-10 flex-wrap">
       <section className="max-w-xl">
-        <h1 className="text-xl md:text-2xl lg:text-3xl font-light">
+        <h1 className="text-xl md:text-2xl lg:text-3xl font-light tracking-wide">
           Flexible. Extensible. Fast.
         </h1>
         <h2 className="text-4xl md:text-6xl lg:text-7xl font-bold mt-10">

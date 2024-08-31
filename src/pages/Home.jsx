@@ -4,6 +4,8 @@ import {
   ToolSection,
   WhyHardhat,
   CommunitySection,
+  LandingBanner,
+  BrandSection,
 } from "../components"
 
 const Home = ({ isDarkMode }) => {
@@ -14,6 +16,8 @@ const Home = ({ isDarkMode }) => {
       <ToolSection isDarkMode={isDarkMode} />
       <WhyHardhat isDarkMode={isDarkMode} />
       <CommunitySection isDarkMode={isDarkMode} />
+      <LandingBanner isDarkMode={isDarkMode} />
+      <BrandSection />
     </main>
   )
 }
