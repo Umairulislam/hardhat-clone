@@ -9,6 +9,18 @@ import {
   opyn,
   poap,
   set,
+  augur,
+  celo,
+  chainlink,
+  horizon,
+  instadapp,
+  mainframe,
+  mycrypto,
+  reflexer,
+  skale,
+  sushiswap,
+  uniswap,
+  unlock,
 } from "../assets"
 
 const tools = [
@@ -76,6 +88,66 @@ const brands = [
     id: 6,
     name: "Set",
     icon: set,
+  },
+  {
+    id: 7,
+    name: "Augur",
+    icon: augur,
+  },
+  {
+    id: 8,
+    name: "Celo",
+    icon: celo,
+  },
+  {
+    id: 9,
+    name: "Chainlink",
+    icon: chainlink,
+  },
+  {
+    id: 10,
+    name: "Horizon",
+    icon: horizon,
+  },
+  {
+    id: 11,
+    name: "Instadapp",
+    icon: instadapp,
+  },
+  {
+    id: 12,
+    name: "Mainframe",
+    icon: mainframe,
+  },
+  {
+    id: 13,
+    name: "MyCrypto",
+    icon: mycrypto,
+  },
+  {
+    id: 14,
+    name: "Reflexer",
+    icon: reflexer,
+  },
+  {
+    id: 15,
+    name: "Skale",
+    icon: skale,
+  },
+  {
+    id: 16,
+    name: "SushiSwap",
+    icon: sushiswap,
+  },
+  {
+    id: 17,
+    name: "Uniswap",
+    icon: uniswap,
+  },
+  {
+    id: 18,
+    name: "Unlock",
+    icon: unlock,
   },
 ]
 

@@ -23,7 +23,7 @@ const HeroSection = ({ isDarkMode }) => {
       <section className="max-w-xl">
         <div className="relative w-96 animate-up-down">
           <img src={isDarkMode ? ethereumLight : ethereumDark} alt="ethereum" />
-          <div className="absolute top-32 right-18">
+          <div className="absolute top-32 right-[70px]">
             <img src={heHead} alt="heHead" />
           </div>
           <div className="absolute top-60 right-32">

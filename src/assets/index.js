@@ -32,6 +32,18 @@ import optimism from "./optimism.webp"
 import opyn from "./opyn.webp"
 import poap from "./poap.webp"
 import set from "./set.webp"
+import augur from "./augur.webp"
+import celo from "./celo.webp"
+import chainlink from "./chainlink.webp"
+import horizon from "./horizon.webp"
+import instadapp from "./instadapp.webp"
+import mainframe from "./mainframe.webp"
+import mycrypto from "./mycrypto.webp"
+import reflexer from "./reflexer.webp"
+import skale from "./skale.webp"
+import sushiswap from "./sushiswap.webp"
+import uniswap from "./uniswap.webp"
+import unlock from "./unlock.webp"
 
 export {
   logolight,
@@ -68,4 +80,17 @@ export {
   opyn,
   poap,
   set,
+  augur,
+  celo,
+  chainlink,
+  horizon,
+  instadapp,
+  mainframe,
+  mycrypto,
+  reflexer,
+  skale,
+  sushiswap,
+  uniswap,
+  unlock,
+  
 }

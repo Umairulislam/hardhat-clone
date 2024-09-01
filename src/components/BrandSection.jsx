@@ -4,11 +4,9 @@ import { brands } from "../constants"
 const BrandSection = () => {
   return (
     <main className="mt-40">
-      <h1 className="text-center secondary-heading">
-        Trusted by top teams
-      </h1>
+      <h1 className="text-center secondary-heading">Trusted by top teams</h1>
 
-      <div className="overflow-hidden">
+      <div className="overflow-hidden flex justify-center flex-col items-center mt-20">
         {/* First Row */}
         <div className="animate-leftScroll flex space-x-8">
           {brands.slice(0, brands.length / 3).map((brand, index) => (

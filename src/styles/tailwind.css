@@ -72,10 +72,11 @@
   }
 
   .animate-leftScroll {
-    animation: leftScroll 10s linear infinite;
+    animation: leftScroll 15s linear infinite;
   }
 
   .animate-rightScroll {
-    animation: rightScroll 10s linear infinite;
+    animation: rightScroll 15s linear infinite;
   }
+
 }
