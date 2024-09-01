@@ -21,6 +21,12 @@ import {
   sushiswap,
   uniswap,
   unlock,
+  balancer,
+  connext,
+  gnosis,
+  iodestar,
+  melon,
+  status,
 } from "../assets"
 
 const tools = [
@@ -148,6 +154,36 @@ const brands = [
     id: 18,
     name: "Unlock",
     icon: unlock,
+  },
+  {
+    id: 19,
+    name: "Balancer",
+    icon: balancer,
+  },
+  {
+    id: 20,
+    name: "Connext",
+    icon: connext,
+  },
+  {
+    id: 21,
+    name: "Gnosis",
+    icon: gnosis,
+  },
+  {
+    id: 22,
+    name: "Iodestar",
+    icon: iodestar,
+  },
+  {
+    id: 23,
+    name: "Melon",
+    icon: melon,
+  },
+  {
+    id: 24,
+    name: "Status",
+    icon: status,
   },
 ]
 

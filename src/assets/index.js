@@ -44,6 +44,12 @@ import skale from "./skale.webp"
 import sushiswap from "./sushiswap.webp"
 import uniswap from "./uniswap.webp"
 import unlock from "./unlock.webp"
+import balancer from "./balancer.webp"
+import connext from "./connext.webp"
+import gnosis from "./gnosis.webp"
+import iodestar from "./iodestar.webp"
+import melon from "./melon.webp"
+import status from "./status.webp"
 
 export {
   logolight,
@@ -92,5 +98,11 @@ export {
   sushiswap,
   uniswap,
   unlock,
+  balancer,
+  connext,
+  gnosis,
+  iodestar,
+  melon,
+  status,
   
 }

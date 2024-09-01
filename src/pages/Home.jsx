@@ -6,6 +6,7 @@ import {
   CommunitySection,
   LandingBanner,
   BrandSection,
+  TestimonialSecton,
 } from "../components"
 
 const Home = ({ isDarkMode }) => {
@@ -18,6 +19,7 @@ const Home = ({ isDarkMode }) => {
       <CommunitySection isDarkMode={isDarkMode} />
       <LandingBanner isDarkMode={isDarkMode} />
       <BrandSection />
+      <TestimonialSecton />
     </main>
   )
 }
