@@ -26,7 +26,7 @@ const TestimonialCarousel = () => {
                   <img
                     src={testimonial.avatar}
                     alt={testimonial.name}
-                    className="rounded-full w-32 h-32"
+                    className="rounded-full w-28 h-28"
                   />
                 </div>
                 <div>

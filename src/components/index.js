@@ -7,6 +7,8 @@ import LandingBanner from "./LandingBanner"
 import BrandSection from "./BrandSection"
 import FeatureSection from "./FeatureSection"
 import TestimonialSecton from "./TestimonialSecton"
+import NomicFoundation from "./NomicFoundation"
+import EthereumFoundation from "./EthereumFoundation"
 import Footer from "./Footer"
 
 export {
@@ -19,5 +21,7 @@ export {
   BrandSection,
   FeatureSection,
   TestimonialSecton,
+  NomicFoundation,
+  EthereumFoundation,
   Footer,
 }

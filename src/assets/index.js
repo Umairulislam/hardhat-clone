@@ -56,6 +56,10 @@ import aone from "./aone.svg"
 import avatar1 from "./avatar1.webp"
 import avatar2 from "./avatar2.webp"
 import avatar3 from "./avatar3.webp"
+import nomicFoundationDark from "./nomic-foundation-dark.svg"
+import nomicFoundationLight from "./nomic-foundation-light.svg"
+import ethereumFoundationDark from "./ethereum-foundation-dark.svg"
+import ethereumFoundationLight from "./ethereum-foundation-light.svg"
 
 export {
   logolight,
@@ -116,4 +120,8 @@ export {
   avatar1,
   avatar2,
   avatar3,
+  nomicFoundationDark,
+  nomicFoundationLight,
+  ethereumFoundationDark,
+  ethereumFoundationLight,
 }

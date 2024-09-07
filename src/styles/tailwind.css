@@ -96,8 +96,14 @@
   }
 
   /* Custom shadow class for shadow on all sides */
-  .shadow-all {
-    --tw-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+  .shadow-all-dark {
+    --tw-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+    --tw-shadow-colored: 0 0 15px var(--tw-shadow-color);
+    box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000),
+      var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
+  }
+  .shadow-all-light {
+    --tw-shadow: 0 0 15px rgba(200, 200, 200, 0.4);
     --tw-shadow-colored: 0 0 15px var(--tw-shadow-color);
     box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000),
       var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
@@ -109,7 +115,6 @@
 .swiper-button-prev {
   @apply text-gray-400 p-6 border-gray-400 border rounded-full absolute top-36;
   @apply hover:shadow-lg hover:shadow-gray-600 hover:translate-y-[-4px] transition-all duration-300 shadow-xl;
-  
 }
 .swiper-button-next::after,
 .swiper-button-prev::after {

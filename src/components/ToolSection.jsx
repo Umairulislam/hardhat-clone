@@ -5,7 +5,10 @@ const ToolSection = ({ isDarkMode }) => {
   const [activeTool, setActiveTool] = useState(tools[0])
 
   return (
-    <main className="flex justify-center flex-col md:flex-row items-center gap-5 flex-wrap mt-40">
+    <main
+      className="flex justify-center flex-col md:flex-row items-center gap-5 flex-wrap mt-40"
+      id="tools"
+    >
       <section className="max-w-lg border-l-2 p-10 border-slate-700 relative cursor-pointer">
         <span className="absolute left-0 top-0 w-10 border-t-2 pl-5 border-slate-700"></span>
         <h1 className="text-2xl tracking-widest">TOOLS</h1>
@@ -14,12 +17,26 @@ const ToolSection = ({ isDarkMode }) => {
             <div
               key={tool.id}
               onClick={() => setActiveTool(tool)}
-              className={`flex items-center gap-5 shadow-md p-4  ${
-                isDarkMode ? "shadow-gray-400" : "shadow-gray-950"
-              } font-bold`}
+              className={`flex items-center gap-5 p-4  font-bold hover:scale-110 transition-all duration-300 ease-in-out ${
+                activeTool.id === tool.id
+                  ? isDarkMode
+                    ? "shadow-all-light"
+                    : "shadow-all-dark"
+                  : ""
+              }`}
             >
               <div>
-                <img src={tool.icon} alt="" className="w-16" />
+                <img
+                  src={tool.icon}
+                  alt=""
+                  className={`${
+                    activeTool.id === tool.id
+                      ? "shadow-none"
+                      : isDarkMode
+                      ? "shadow-all-light"
+                      : "shadow-all-dark"
+                  } p-4`}
+                />
               </div>
               <div>
                 <h2 className="text-gray-500">Hardhat</h2>
