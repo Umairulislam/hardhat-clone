@@ -2,58 +2,71 @@
 @tailwind components;
 @tailwind utilities;
 
+/* Base Layer: Global foundational styles */
 @layer base {
+  /* Dark mode background and text color */
   .dark-mode {
     @apply bg-darkBackground text-lightText;
   }
 
+  /* Light mode background and text color */
   .light-mode {
     @apply bg-lightBackground text-darkText;
   }
 
+  /* Custom padding for various breakpoints */
   .custom-padding {
     @apply px-4 py-6 md:px-8 md:py-10;
   }
 
+  /* Primary heading for general sections */
   .primary-heading {
     @apply text-xl md:text-2xl tracking-widest uppercase font-medium;
   }
+
+  /* Secondary heading with bolder and larger font size */
   .secondary-heading {
     @apply text-2xl md:text-4xl font-bold;
   }
 }
 
+/* Components Layer: Reusable components (buttons, etc.) */
 @layer components {
+  /* Base button style */
   .btn {
     @apply px-[22px] py-[10px] rounded-sm shadow-lg text-sm;
   }
 
+  /* Primary button with background color and hover effect */
   .btn-primary {
     @apply bg-primary text-black hover:bg-yellow-200;
   }
 
+  /* Secondary button with border and hover effect */
   .btn-secondary {
     @apply bg-transparent border border-gray-400 hover:bg-violet-400;
   }
 }
 
-/* Hero animation */
-@keyframes upDown {
-  0%,
-  100% {
-    transform: translateY(0);
-  }
-  50% {
-    transform: translateY(-20px);
-  }
-}
-
-.animate-up-down {
-  animation: upDown 3s ease-in-out infinite;
-}
-
-/* Brand animation */
+/* Utilities Layer: Animations and utility classes */
 @layer utilities {
+  /* Hero section animation for floating effect */
+  @keyframes upDown {
+    0%,
+    100% {
+      transform: translateY(0);
+    }
+    50% {
+      transform: translateY(-20px);
+    }
+  }
+
+  /* Apply up and down animation */
+  .animate-up-down {
+    animation: upDown 3s ease-in-out infinite;
+  }
+
+  /* Brand scrolling animations */
   @keyframes leftScroll {
     from {
       transform: translateX(0%);
@@ -62,6 +75,7 @@
       transform: translateX(-100%);
     }
   }
+
   @keyframes rightScroll {
     from {
       transform: translateX(0%);
@@ -71,12 +85,33 @@
     }
   }
 
+  /* Apply left scroll animation for brand logos */
   .animate-leftScroll {
     animation: leftScroll 20s linear infinite;
   }
 
+  /* Apply right scroll animation for brand logos */
   .animate-rightScroll {
     animation: rightScroll 20s linear infinite;
   }
 
+  /* Custom shadow class for shadow on all sides */
+  .shadow-all {
+    --tw-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+    --tw-shadow-colored: 0 0 15px var(--tw-shadow-color);
+    box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000),
+      var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
+  }
+}
+
+/* Custom classes for Swiper button */
+.swiper-button-next,
+.swiper-button-prev {
+  @apply text-gray-400 p-6 border-gray-400 border rounded-full absolute top-36;
+  @apply hover:shadow-lg hover:shadow-gray-600 hover:translate-y-[-4px] transition-all duration-300 shadow-xl;
+  
+}
+.swiper-button-next::after,
+.swiper-button-prev::after {
+  @apply text-base;
 }

@@ -50,6 +50,12 @@ import gnosis from "./gnosis.webp"
 import iodestar from "./iodestar.webp"
 import melon from "./melon.webp"
 import status from "./status.webp"
+import kyber from "./kyber.svg"
+import synthetix from "./synthetix.svg"
+import aone from "./aone.svg"
+import avatar1 from "./avatar1.webp"
+import avatar2 from "./avatar2.webp"
+import avatar3 from "./avatar3.webp"
 
 export {
   logolight,
@@ -104,5 +110,10 @@ export {
   iodestar,
   melon,
   status,
-  
+  kyber,
+  synthetix,
+  aone,
+  avatar1,
+  avatar2,
+  avatar3,
 }

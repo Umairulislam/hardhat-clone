@@ -3,7 +3,11 @@ import { communityDark, communityLight } from "../assets"
 
 const CommunitySection = ({ isDarkMode }) => {
   return (
-    <main className="mt-40 flex justify-around flex-row-reverse items-center gap-10 flex-wrap bg-secondary p-10">
+    <main
+      className={`mt-40 flex justify-around flex-row-reverse items-center gap-10 flex-wrap ${
+        isDarkMode ? "bg-lightBackground" : "bg-secondary"
+      } p-10 shadow-all`}
+    >
       <section className="max-w-md">
         <img src={isDarkMode ? communityLight : communityDark} alt="" />
       </section>

@@ -27,6 +27,12 @@ import {
   iodestar,
   melon,
   status,
+  kyber,
+  aone,
+  synthetix,
+  avatar1,
+  avatar2,
+  avatar3,
 } from "../assets"
 
 const tools = [
@@ -187,4 +193,34 @@ const brands = [
   },
 ]
 
-export { tools, brands }
+const testimonials = [
+  {
+    id: 1,
+    avatar: avatar1,
+    name: "Victor Tran",
+    designation: "CTO at Kyber",
+    companyLogo: kyber,
+    message:
+      "Working with Hardhat has been a great experience. Thanks to its flexibility we were able to test across different Solidity versions without duplicating our setup. Kyber has been around for long enough to have legacy contracts deployed with different Solidity versions in our architecture, so this kind of flexibility is important for such a mature project. The collaboration between the Kyber and Hardhat teams to fix issues and implement new features has been fast and smooth, which helped our internal timelines a lot.",
+  },
+  {
+    id: 2,
+    avatar: avatar2,
+    name: "ustin J. Moses",
+    designation: "CTO at SYNTHETIX",
+    companyLogo: synthetix,
+    message:
+      "Tired of battling other testing frameworks, I tried Hardhat on a whim one afternoon to see just how hard it might be to port Synthetix over to it. After fifteen minutes I had one of our specs running nearly 10x faster that what I’d become used to; from that moment I was hooked. Since then, we’ve integrated coverage, supported multiple versions of solc and even set up legacy testing through injection - all without having to wait for features to be added by the Hardhat team. It’s been built using its own extensible task system, dogfooding its own plugin architecture. Fast test turnarounds, extensible architecture and solidity stack traces - my dream of smart contract TDD has become a lot more real!",
+  },
+  {
+    id: 3,
+    avatar: avatar3,
+    name: "Brett Sun",
+    designation: "CTO at Aragon One",
+    companyLogo: aone,
+    message:
+      "Our interest in Hardhat was driven by our own experience of building and maintaining developer tooling for the Aragon ecosystem. Not only were these efforts time consuming, difficult, and error-prone, we also found ourselves constantly re-inventing the wheel in areas we did not want to care about or force opinions on (e.g. Ganache connections, Truffle providers, test strategy). Hardhat, with its plugin ecosystem, has effectively eliminated many of these problems for us. We feel confident piggybacking on the best for the underlying layers so that we can focus our attention on exposing the power of the Aragon ecosystem to our community.",
+  },
+]
+
+export { tools, brands, testimonials }
