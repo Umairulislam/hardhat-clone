@@ -6,7 +6,7 @@ const CommunitySection = ({ isDarkMode }) => {
     <main
       className={`mt-40 flex justify-around flex-row-reverse items-center gap-10 flex-wrap ${
         isDarkMode ? "bg-lightBackground" : "bg-secondary"
-      } p-10 shadow-all`}
+      } p-10 ${isDarkMode ? "shadow-all-light" : "shadow-all-dark"}`}
     >
       <section className="max-w-md">
         <img src={isDarkMode ? communityLight : communityDark} alt="" />
