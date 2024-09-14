@@ -13,9 +13,8 @@ import {
 } from "../components"
 
 const Home = ({ isDarkMode }) => {
-  console.log(isDarkMode)
   return (
-    <main className="">
+    <main>
       <section className="custom-padding">
         <HeroSection isDarkMode={isDarkMode} />
         <ToolSection isDarkMode={isDarkMode} />

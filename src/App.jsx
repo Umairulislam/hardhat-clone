@@ -20,7 +20,7 @@ const App = () => {
         <Navbar isDarkMode={isDarkMode} toggleTheme={toggleTheme} />
         <Routes>
           <Route path="/" element={<Home isDarkMode={isDarkMode} />} />
-          <Route path="/plugins" element={<Plugins />} />
+          <Route path="/plugins" element={<Plugins isDarkMode={isDarkMode} />} />
           <Route path="/docs" element={<Docs />} />
           <Route path="/tutorial" element={<Tutorial />} />
         </Routes>

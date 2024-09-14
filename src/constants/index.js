@@ -223,4 +223,376 @@ const testimonials = [
   },
 ]
 
-export { tools, brands, testimonials }
+const officialPlugins = [
+  {
+    id: 1,
+    name: "@nomicfoundation/hardhat-toolbox",
+    description:
+      "Nomic Foundation's recommended bundle of Hardhat plugins (ethers based)",
+    tags: ["Hardhat", "Setup", "Ethers.js"],
+    foundation: "Nomic Foundation",
+  },
+  {
+    id: 2,
+    name: "@nomicfoundation/hardhat-toolbox-viem",
+    description:
+      "Nomic Foundation's recommended bundle of Hardhat plugins (viem based)",
+    tags: ["Hardhat", "Setup", "viem"],
+    foundation: "Nomic Foundation",
+  },
+  {
+    id: 3,
+    name: "@nomicfoundation/hardhat-chai-matchers",
+    description: "Adds Ethereum-related matchers to Chai",
+    tags: ["Chai", "Testing"],
+    foundation: "Nomic Foundation",
+  },
+  {
+    id: 4,
+    name: "@nomicfoundation/hardhat-ethers",
+    description: "Injects ethers.js into the Hardhat Runtime Environment",
+    tags: ["Ethers.js", "Testing", "Tasks", "Scripts"],
+    foundation: "Nomic Foundation",
+  },
+  {
+    id: 5,
+    name: "@nomicfoundation/hardhat-viem",
+    description: "Injects ethers.js into the Hardhat Runtime Environment",
+    tags: ["Ethers.js", "Testing", "Tasks", "Scripts"],
+    foundation: "Nomic Foundation",
+  },
+  {
+    id: 6,
+    name: "@nomicfoundation/hardhat-verify",
+    description: "Automatically verify contracts",
+    tags: ["Etherscan", "Verification"],
+    foundation: "Nomic Foundation",
+  },
+  {
+    id: 7,
+    name: "@nomicfoundation/hardhat-foundry",
+    description:
+      "Makes it easier to use Hardhat and Foundry in the same project",
+    tags: ["Foundry"],
+    foundation: "Nomic Foundation",
+  },
+  {
+    id: 8,
+    name: "@nomicfoundation/hardhat-ledger",
+    description: "Hardhat plugin for the Ledger hardware wallet",
+    tags: ["Ledger", "Wallet"],
+    foundation: "Nomic Foundation",
+  },
+  {
+    id: 9,
+    name: "@nomiclabs/hardhat-vyper",
+    description: "Adds support to compile Vyper smart contracts",
+    tags: ["Vyper", "Compiler"],
+    foundation: "Nomic Foundation",
+  },
+  {
+    id: 10,
+    name: "@nomiclabs/hardhat-solhint",
+    description: "Easily run solhint to lint your Solidity code",
+    tags: ["Solhint", "Linter"],
+    foundation: "Nomic Foundation",
+  },
+  {
+    id: 11,
+    name: "@nomiclabs/hardhat-solpp",
+    description:
+      "Automatically run the solpp preprocessor before each compilation",
+    tags: ["Solpp", "Preprocessor"],
+    foundation: "Nomic Foundation",
+  },
+  {
+    id: 12,
+    name: "@nomiclabs/hardhat-waffle",
+    description:
+      "Adds a Waffle-compatible provider to the Hardhat Runtime Environment and automatically initializes the Waffle Chai matchers",
+    tags: ["Waffle", "Testing"],
+    foundation: "Nomic Foundation",
+  },
+  {
+    id: 13,
+    name: "@nomiclabs/hardhat-web3",
+    description: "Injects Web3 1.x into the Hardhat Runtime Environment",
+    tags: ["Web3.js", "Testing", "Tasks", "Scripts"],
+    foundation: "Nomic Foundation",
+  },
+  {
+    id: 14,
+    name: "@nomicfoundation/hardhat-web3-v4",
+    description: "Injects Web3 4.x into the Hardhat Runtime Environment",
+    tags: ["Web3.js", "Testing", "Tasks", "Scripts"],
+    foundation: "ChainSafe and Nomic Foundation",
+  },
+  {
+    id: 15,
+    name: "@nomiclabs/hardhat-truffle5",
+    description: "Integration with TruffleContract from Truffle 5",
+    tags: ["Truffle", "Testing"],
+    foundation: "Nomic Foundation",
+  },
+  {
+    id: 16,
+    name: "@nomiclabs/hardhat-web3-legacy",
+    description: "Injects Web3 0.20.x into the Hardhat Runtime Environment",
+    tags: ["Web3.js", "Legacy", "Testing", "Tasks", "Scripts"],
+    foundation: "Nomic Foundation",
+  },
+  {
+    id: 17,
+    name: "@nomiclabs/hardhat-truffle4",
+    description: "Integration with TruffleContract from Truffle 4",
+    tags: ["Truffle", "Testing"],
+    foundation: "Nomic Foundation",
+  },
+]
+
+const communityPlugins = [
+  {
+    id: 1,
+    name: "solidity-coverage",
+    description: "Code coverage for Solidity",
+    tags: ["Testing", "Coverage"],
+    foundation: "Chris Gewecke",
+  },
+  {
+    id: 2,
+    name: "hardhat-gas-reporter",
+    description:
+      "Gas usage per unit test. Average gas usage per method. A mocha reporter.",
+    tags: ["Testing", "Gas"],
+    foundation: "Chris Gewecke",
+  },
+  {
+    id: 3,
+    name: "@typechain/hardhat",
+    description: "Zero-config TypeChain support for Hardhat.",
+    tags: ["Testing", "Tasks"],
+    foundation: "Rahul Sethuram",
+  },
+  {
+    id: 4,
+    name: "hardhat-watcher",
+    description: "Automatically run Hardhat actions on file changes.",
+    tags: ["Tasks", "Testing"],
+    foundation: "Xander Deseyn",
+  },
+  {
+    id: 5,
+    name: "hardhat-deploy",
+    description: "Hardhat plugin for Deployments",
+    tags: ["Deployment", "Testing"],
+    foundation: "Ronan Sandford",
+  },
+  {
+    id: 6,
+    name: "hardhat-contract-sizer",
+    description: "Calculate compiled contract sizes",
+    tags: ["Compiling", "Bytecode"],
+    foundation: "Nick Barry",
+  },
+  {
+    id: 7,
+    name: "@openzeppelin/hardhat-upgrades",
+    description:
+      "Hardhat plugin for deploying and managing upgradeable contracts.",
+    tags: ["Security", "Upgrades"],
+    foundation: "OpenZeppelin",
+  },
+  {
+    id: 8,
+    name: "hardhat-deploy-ethers",
+    description: "A hardhat-deploy plugin for Ethers.js v5",
+    tags: ["Ethers.js", "hardhat-deploy"],
+    foundation: "Ronan Sandford",
+  },
+  {
+    id: 9,
+    name: "hardhat-tracer",
+    description:
+      "See internal transactions, events and storage operations during your hardhat tests in the console",
+    tags: ["EVM", "Events", "Logs", "Trace", "Console", "Testing"],
+    foundation: "Soham Zemse",
+  },
+  {
+    id: 10,
+    name: "@tenderly/hardhat-tenderly",
+    description: "Easily integrate your Hardhat project with Tenderly.",
+    tags: ["Debugging", "Monitoring", "Alerting", "Tasks", "Scripts"],
+    foundation: "Tenderly",
+  },
+  {
+    id: 11,
+    name: "hardhat-abi-exporter",
+    description: "Automatically export Solidity contract ABIs on compilation",
+    tags: ["Compiling", "ABI"],
+    foundation: "Nick Barry",
+  },
+  {
+    id: 12,
+    name: "@defi-wonderland/smock",
+    description:
+      "The Solidity mocking library. Smock is a utility package that can generate mock Solidity contracts written entirely in JavaScript.",
+    tags: ["Testting", "Mocking"],
+    foundation: "DeFi Wonderland and Optimism PBC",
+  },
+  {
+    id: 13,
+    name: "hardhat-dependency-compiler",
+    description: "Compile Solidity sources directly from npm dependencies",
+    tags: ["Compiling", "Dependencies"],
+    foundation: "Nick Barry",
+  },
+  {
+    id: 14,
+    name: "@tovarishfin/hardhat-yul",
+    description:
+      "An updated and working Hardhat plugin to compile the Yul and Yul+ languages into solc compatible artifacts. Works with .yul and .yulp file extensions",
+    tags: ["Yul", "Assembly", "Compiler", "Yul+"],
+    foundation: "tovarishfin",
+  },
+  {
+    id: 15,
+    name: "hardhat-preprocessor",
+    description:
+      "An hardhat plugin to pre-process contract source code before compilation",
+    tags: ["Solidity", "Preprocessor"],
+    foundation: "Ronan Sandford",
+  },
+  {
+    id: 16,
+    name: "@primitivefi/hardhat-dodoc",
+    description:
+      "Zero-config Hardhat plugin to generate documentation for all your Solidity contracts.",
+    tags: ["Documentation", "Docs", "Solidity", "NatSpec"],
+    foundation: "Primitive",
+  },
+  {
+    id: 17,
+    name: "hardhat-storage-layout",
+    description: "Exporting Solidity contract storage layout.",
+    tags: ["solidity", "storage-layout"],
+    foundation: "Aurora Labs",
+  },
+  {
+    id: 18,
+    name: "hardhat-log-remover",
+    description:
+      "Remove Hardhat console.log imports and calls from Solidity source files.",
+    tags: ["Logging", "Console", "Deployment"],
+    foundation: "Nick Barry",
+  },
+  {
+    id: 19,
+    name: "hardhat-spdx-license-identifier",
+    description:
+      "Automatically prepend local Solidity source files with an SPDX License Identifier.",
+    tags: ["License"],
+    foundation: "Nick Barry",
+  },
+  {
+    id: 20,
+    name: "hardhat-erc1820",
+    description:
+      "Automatically deploy the ERC-1820 registry contract to Hardhat EVM chains.",
+    tags: ["Testing"],
+    foundation: "David Mihal",
+  },
+  {
+    id: 21,
+    name: "hardhat-w3f",
+    description:
+      "The hardhat-w3f plugin allows builders to build & run Web3 Functions connecting smart off-chain data with smart contracts.",
+    tags: ["Gelato", "w3f", "offchain", "functions"],
+    foundation: "Gelato Network",
+  },
+  {
+    id: 22,
+    name: "hardhat-docgen",
+    description: "Generate a static documentation site from NatSpec comments.",
+    tags: ["Documentation", "NatSpec"],
+    foundation: "Nick Barry, samuveth",
+  },
+  {
+    id: 23,
+    name: "hardhat-exposed",
+    description:
+      "Automatically expose internal Solidity functions for testing.",
+    tags: ["Solidity", "Testing"],
+    foundation: "Francisco Giordano",
+  },
+  {
+    id: 24,
+    name: "jest-environment-hardhat",
+    description: "A jest environment with Hardhat built in.",
+    tags: ["uniswap", "testing", "jest", "node"],
+    foundation: "Uniswap Labs",
+  },
+  {
+    id: 25,
+    name: "hardhat-ethernal",
+    description:
+      "Integrate your Hardhat project and Hardhat network with Ethernal. Ethernal is a block explorer for private chains.",
+    tags: ["explorer", "debugging", "development-tool"],
+    foundation: "Ethernal",
+  },
+  {
+    id: 26,
+    name: "hardhat-time-n-mine",
+    description:
+      "Helper plugin to manipulate blocks timestamp and trigger mining. It can be used from the command line and in the tests.",
+    tags: ["Testing"],
+    foundation: "Gonzalo Petraglia & Alan Verbner",
+  },
+  {
+    id: 27,
+    name: "xdeployer",
+    description:
+      "Hardhat plugin to deploy your smart contracts across multiple EVM chains with the same deterministic address.",
+    tags: ["Deployment", "CREATE2", "Tasks"],
+    foundation: "Pascal Marco Caversaccio",
+  },
+  {
+    id: 28,
+    name: "hardhat-cannon",
+    description:
+      "Define your project's deployment in a simple manifest, then deploy and share it anywhere. Inspired by Docker, Terraform, and npm.",
+    tags: ["Tooling", "Deployment", "Testing"],
+    foundation: "Synthetix Core Contributors",
+  },
+  {
+    id: 29,
+    name: "hardhat-etherscan-abi",
+    description: "Automatically fetch contract ABI from Etherscan.",
+    tags: ["Etherscan", "ABI"],
+    foundation: "Roman Semenov",
+  },
+  {
+    id: 30,
+    name: "@0xweb/hardhat",
+    description:
+      "Generate 0xWeb classes for contracts to easily communicate with the blockchain.",
+    tags: ["dApp-Client", "Class-Generation", "Testing"],
+    foundation: "Alex Kit",
+  },
+  {
+    id: 31,
+    name: "hardhat-diamond-abi",
+    description:
+      "Hardhat plugin to combine multiple ABIs into a Diamond ABI artifact.",
+    tags: ["diamond standard"],
+    foundation: "Project Sophon",
+  },
+  {
+    id: 32,
+    name: "hardhat-storage-layout-changes",
+    description: "Check for storage layout changes.",
+    tags: ["Storage Layout", "Solidity", "Upgradable Contracts"],
+    foundation: "Soham Zemse",
+  },
+]
+
+export { tools, brands, testimonials, officialPlugins, communityPlugins }

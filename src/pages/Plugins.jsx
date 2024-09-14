@@ -1,10 +1,13 @@
-import React from 'react'
+import React from "react"
+import { PluginsSection } from "../components"
 
-const Plugins = () => {
+const Plugins = ({ isDarkMode }) => {
   return (
-    <div>
-      Plugins comming soon
-    </div>
+    <main>
+      <section className="custom-padding">
+        <PluginsSection isDarkMode={isDarkMode} />
+      </section>
+    </main>
   )
 }
 

@@ -10,6 +10,7 @@ import TestimonialSecton from "./TestimonialSecton"
 import NomicFoundation from "./NomicFoundation"
 import EthereumFoundation from "./EthereumFoundation"
 import Footer from "./Footer"
+import PluginsSection from "./PluginsSection"
 
 export {
   Navbar,
@@ -24,4 +25,5 @@ export {
   NomicFoundation,
   EthereumFoundation,
   Footer,
+  PluginsSection,
 }

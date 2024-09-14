@@ -7,8 +7,9 @@ export default {
       colors: {
         primary: "#FFF100", // Yellow color used button
         secondary: "#20232A", // Dark background color on community section
+        tertiary: "#EDCF00", // Yellow color for text in plugins
         darkBackground: "#181A1F", // Background color for dark mode
-        lightBackground: "#FFFFFF", // Light background for light mode
+        lightBackground: "#FFFFFF", // Background color for light mode
         darkText: "#181A1F", // Light text for dark mode
         lightText: "#FFFFFF", // Dark text for light mode
         accent: "#6641FF", // Purple accent color
