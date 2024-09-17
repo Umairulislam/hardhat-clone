@@ -11,6 +11,7 @@ import NomicFoundation from "./NomicFoundation"
 import EthereumFoundation from "./EthereumFoundation"
 import Footer from "./Footer"
 import PluginsSection from "./PluginsSection"
+import SideNavbar from "./SideNavbar"
 
 export {
   Navbar,
@@ -26,4 +27,5 @@ export {
   EthereumFoundation,
   Footer,
   PluginsSection,
+  SideNavbar,
 }

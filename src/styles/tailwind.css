@@ -87,12 +87,12 @@
 
   /* Apply left scroll animation for brand logos */
   .animate-leftScroll {
-    animation: leftScroll 20s linear infinite;
+    animation: leftScroll 15s linear infinite;
   }
 
   /* Apply right scroll animation for brand logos */
   .animate-rightScroll {
-    animation: rightScroll 20s linear infinite;
+    animation: rightScroll 15s linear infinite;
   }
 
   /* Custom shadow class for shadow on all sides */
