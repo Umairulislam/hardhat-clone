@@ -1,5 +1,5 @@
 import React from "react"
-import { PluginsSection } from "../components"
+import { PluginsSection } from "../../components"
 
 const Plugins = ({ isDarkMode }) => {
   return (

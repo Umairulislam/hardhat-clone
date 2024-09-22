@@ -99,7 +99,7 @@ const SideNavbar = () => {
   ]
 
   return (
-    <div className="hidden md:block w-72 h-screen overflow-y-auto p-4">
+    <div className="fixed left-0 hidden lg:block w-72 h-screen overflow-y-auto p-4">
       <nav>
         {sections.map((section) => (
           <div key={section.heading} className={`mb-4 `}>

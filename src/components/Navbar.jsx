@@ -21,13 +21,17 @@ const Navbar = ({ isDarkMode, toggleTheme }) => {
   return (
     <main>
       {/* Desktop Menu */}
-      <nav className="flex justify-between items-center gap-10 px-8 py-4 md:px-10 md:py-6 flex-wrap">
-        <section>
+      <nav className="flex justify-between items-center gap-10 px-8 py-6 md:px-10 md:py-6">
+        <div>
           <NavLink to="/">
-            <img src={isDarkMode ? logoDark : logolight} alt="logo" />
+            <img
+              src={isDarkMode ? logoDark : logolight}
+              alt="logo"
+              className="w-32 md:w-44"
+            />
           </NavLink>
-        </section>
-        <section className="hidden md:flex justify-evenly items-center gap-14 text-lg uppercase">
+        </div>
+        <section className="hidden lg:flex justify-evenly items-center gap-14 text-lg uppercase">
           <div className="flex gap-6">
             <NavLink
               to="/"
@@ -106,16 +110,16 @@ const Navbar = ({ isDarkMode, toggleTheme }) => {
             </a>
           </div>
         </section>
-        <section className="hidden md:flex">
+        <div className="hidden md:flex">
           <button onClick={toggleTheme}>
             <ContrastIcon />
           </button>
-        </section>
+        </div>
       </nav>
 
       {/* Mobile Menu */}
       <nav
-        className={`lg:hidden fixed top-14 left-0 h-full w-full ${
+        className={`lg:hidden fixed z-50 top-14 left-0 h-full w-full ${
           isDarkMode ? "light-mode" : "dark-mode"
         }  transform ${
           isOpen ? "translate-x-0" : "-translate-x-full"
@@ -188,16 +192,22 @@ const Navbar = ({ isDarkMode, toggleTheme }) => {
               <LinkedInIcon />
             </a>
           </div>
-          <button onClick={toggleTheme} className="mt-8">
-            <ContrastIcon />
-          </button>
+          <div>
+            <button onClick={toggleTheme} className="mt-8">
+              <ContrastIcon />
+            </button>
+          </div>
         </section>
       </nav>
 
       {/* Mobile Menu Icon */}
-      <section className="md:hidden absolute top-6 right-4">
-        <button onClick={handleMenu}>
-          {isOpen ? <ClearIcon /> : <MenuIcon />}
+      <section className="md:hidden absolute top-6 right-6">
+        <button onClick={handleMenu} className="w-10 h-10">
+          {isOpen ? (
+            <ClearIcon style={{ width: "32px", height: "32px" }} />
+          ) : (
+            <MenuIcon style={{ width: "32px", height: "32px" }} />
+          )}
         </button>
       </section>
     </main>
