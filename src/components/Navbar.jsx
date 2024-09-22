@@ -50,7 +50,7 @@ const Navbar = ({ isDarkMode, toggleTheme }) => {
               Tools
             </a>
             <NavLink
-              to="/plugins"
+              to="/hardhat-runner/plugins"
               className={({ isActive }) =>
                 isActive
                   ? `border-b-2 ${isDarkMode ? "border-black" : "border-white"}`
@@ -137,7 +137,7 @@ const Navbar = ({ isDarkMode, toggleTheme }) => {
             Tools
           </a>
           <NavLink
-            to="/plugins"
+            to="/hardhat-runner/plugins"
             onClick={handleMenu}
             className={({ isActive }) =>
               isActive

@@ -2,6 +2,11 @@
 @tailwind components;
 @tailwind utilities;
 
+/* Smooth scroll behavior for the entire document */
+html {
+  scroll-behavior: smooth;
+}
+
 /* Base Layer: Global foundational styles */
 @layer base {
   /* Dark mode background and text color */
