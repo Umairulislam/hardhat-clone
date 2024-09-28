@@ -10,7 +10,7 @@ import {
   NomicFoundation,
   EthereumFoundation,
   Footer,
-} from "../components"
+} from "../../components"
 
 const Home = ({ isDarkMode }) => {
   return (

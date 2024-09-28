@@ -1,13 +1,18 @@
 import React, { useState } from "react"
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom"
 import Navbar from "./components/Navbar"
-import Home from "./pages/Home"
-import Tutorial from "./pages/Tutorial"
-import Plugins from "./pages/Plugins/Plugins"
-import PluginsLayout from "./pages/Plugins/PluginsLayout"
-import PluginDetail from "./pages/Plugins/PluginDetail"
-import DocsLayout from "./pages/Docs/DocsLayout"
-import GettingStarted from "./pages/Docs/GettingStarted"
+import { Home } from "./pages/Home"
+import {
+  Plugins,
+  PluginsLayout,
+  HardhatToolbox,
+  HardhatToolboxViem,
+  HardhatChaiMatchers,
+  HardhatEthers,
+  HardhatViem,
+} from "./pages/Plugins"
+import { Docs, DocsLayout, GettingStarted } from "./pages/Docs"
+import { Tutorial } from "./pages/Tutorial"
 
 const App = () => {
   const [isDarkMode, setIsDarkMode] = useState(false)
@@ -28,18 +33,34 @@ const App = () => {
           <Route path="/" element={<Home isDarkMode={isDarkMode} />} />
           <Route path="/tutorial" element={<Tutorial />} />
 
-          {/* Plugins Page */}
+          {/* Plugins Page Page without Sidebar */}
           <Route
             path="/hardhat-runner/plugins"
             element={<Plugins isDarkMode={isDarkMode} />}
           />
 
           {/* Plugins Detail with Sidebar */}
-          <Route
-            path="/hardhat-runner/plugins/:pluginName"
-            element={<PluginsLayout />}
-          >
-            <Route index element={<PluginDetail />} />
+          <Route path="/hardhat-runner/plugins" element={<PluginsLayout />}>
+            <Route
+              path="nomicfoundation-hardhat-toolbox"
+              element={<HardhatToolbox />}
+            />
+            <Route
+              path="nomicfoundation-hardhat-toolbox-viem"
+              element={<HardhatToolboxViem />}
+            />
+            <Route
+              path="nomicfoundation-hardhat-chai-matchers"
+              element={<HardhatChaiMatchers />}
+            />
+            <Route
+              path="nomicfoundation-hardhat-ethers"
+              element={<HardhatEthers />}
+            />
+            <Route
+              path="nomicfoundation-hardhat-viem"
+              element={<HardhatViem />}
+            />
           </Route>
 
           {/* Docs Nested Routes */}
