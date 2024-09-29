@@ -40,26 +40,29 @@ const App = () => {
           />
 
           {/* Plugins Detail with Sidebar */}
-          <Route path="/hardhat-runner/plugins" element={<PluginsLayout />}>
+          <Route
+            path="/hardhat-runner/plugins"
+            element={<PluginsLayout isDarkMode={isDarkMode} />}
+          >
             <Route
               path="nomicfoundation-hardhat-toolbox"
-              element={<HardhatToolbox />}
+              element={<HardhatToolbox isDarkMode={isDarkMode} />}
             />
             <Route
               path="nomicfoundation-hardhat-toolbox-viem"
-              element={<HardhatToolboxViem />}
+              element={<HardhatToolboxViem isDarkMode={isDarkMode} />}
             />
             <Route
               path="nomicfoundation-hardhat-chai-matchers"
-              element={<HardhatChaiMatchers />}
+              element={<HardhatChaiMatchers isDarkMode={isDarkMode} />}
             />
             <Route
               path="nomicfoundation-hardhat-ethers"
-              element={<HardhatEthers />}
+              element={<HardhatEthers isDarkMode={isDarkMode} />}
             />
             <Route
               path="nomicfoundation-hardhat-viem"
-              element={<HardhatViem />}
+              element={<HardhatViem isDarkMode={isDarkMode} />}
             />
           </Route>
 

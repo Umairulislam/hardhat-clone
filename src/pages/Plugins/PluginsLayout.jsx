@@ -1,11 +1,11 @@
 import { Outlet } from "react-router-dom"
 import SideNavbar from "../../components/SideNavbar"
 
-const PluginsLayout = () => {
+const PluginsLayout = ({ isDarkMode }) => {
   return (
     <div className="flex">
       {/* Sidebar navigation for Plugins */}
-      <SideNavbar />
+      <SideNavbar isDarkMode={isDarkMode} />
       {/* Nested routes will be rendered here */}
       <main className="flex-1 p-4 lg:ml-72">
         <Outlet />

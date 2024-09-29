@@ -1,7 +1,7 @@
 import React, { useState } from "react"
 import { Link } from "react-router-dom"
 
-const SideNavbar = () => {
+const SideNavbar = ({ isDarkMode }) => {
   const [activeMenu, setActiveMenu] = useState("")
 
   const handleMenuClick = (menu) => {
@@ -99,7 +99,11 @@ const SideNavbar = () => {
   ]
 
   return (
-    <div className="fixed left-0 hidden lg:block w-72 h-screen overflow-y-auto p-4">
+    <div
+      className={`fixed left-0 hidden lg:block w-72 h-screen overflow-y-auto p-4 ${
+        isDarkMode ? "text-black" : "text-gray-300"
+      }`}
+    >
       <nav>
         {sections.map((section) => (
           <div key={section.heading} className={`mb-4 `}>

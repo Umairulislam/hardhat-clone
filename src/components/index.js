@@ -12,6 +12,7 @@ import EthereumFoundation from "./EthereumFoundation"
 import Footer from "./Footer"
 import PluginsSection from "./PluginsSection"
 import SideNavbar from "./SideNavbar"
+import CodeBlock from "./CodeBlock"
 
 export {
   Navbar,
@@ -28,4 +29,5 @@ export {
   Footer,
   PluginsSection,
   SideNavbar,
+  CodeBlock,
 }

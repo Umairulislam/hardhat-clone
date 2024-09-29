@@ -33,6 +33,11 @@ html {
   .secondary-heading {
     @apply text-2xl md:text-4xl font-bold;
   }
+
+  /* Tertiary heading with smaller font size and uppercase text */
+  .tertiary-heading {
+    @apply text-xl md:text-2xl tracking-wide font-medium;
+  }
 }
 
 /* Components Layer: Reusable components (buttons, etc.) */
