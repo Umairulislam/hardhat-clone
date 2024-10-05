@@ -19,6 +19,7 @@ export default {
         mono: ["Fira Code", "monospace"], // Monospace font for code snippets
       },
       screens: {
+        xs: "480px", // Extra small screen
         sm: "640px", // small screen
         md: "768px", // Medium screen
         lg: "1024px", // Large screen

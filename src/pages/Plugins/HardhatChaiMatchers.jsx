@@ -23,74 +23,67 @@ const HardhatChaiMatchers = ({ isDarkMode }) => {
         We recommend using npm 7 or later. If you do that, then you just need to
         install the plugin itself:
       </p>
-      <div className="bg-[#20232A] text-gray-100 p-4 rounded-lg mt-4 overflow-x-auto">
-        <pre className="whitespace-pre-wrap ">
-          <code>
-            <span className="text-orange-400">npm install </span>
-            <span>--save-dev @nomicfoundation/hardhat-chai-matchers</span>;
-          </code>
-        </pre>
+      <div className="bg-[#20232A] text-gray-100 p-4 rounded-lg mt-4 overflow-auto">
+        <code>
+          <span className="text-orange-400">npm install </span>
+          <span>--save-dev @nomicfoundation/hardhat-chai-matchers</span>;
+        </code>
       </div>
       <p className="mt-2">
         If you are using an older version of npm, you'll also need to install
         all the packages used by the plugin.
       </p>
-      <div className="bg-[#20232A] text-gray-100 p-4 rounded-lg mt-4 overflow-x-auto">
-        <pre className="whitespace-pre-wrap ">
-          <code>
-            <span className="text-orange-400">npm install </span>
-            <span>
-              --save-dev @nomicfoundation/hardhat-chai-matchers chai@4
-              @nomicfoundation/hardhat-ethers ethers
-            </span>
-            ;
-          </code>
-        </pre>
+      <div className="bg-[#20232A] text-gray-100 p-4 rounded-lg mt-4 overflow-auto">
+        <code>
+          <span className="text-orange-400">npm install </span>
+          <span>
+            --save-dev @nomicfoundation/hardhat-chai-matchers chai@4
+            @nomicfoundation/hardhat-ethers ethers
+          </span>
+          ;
+        </code>
       </div>
       <p className="mt-2">That's also the case if you are using yarn:</p>
-      <div className="bg-[#20232A] text-gray-100 p-4 rounded-lg mt-4 overflow-x-auto">
-        <pre className="whitespace-pre-wrap ">
-          <code>
-            <span className="text-orange-400">npm install </span>
-            <span>
-              --dev @nomicfoundation/hardhat-chai-matchers chai@4
-              @nomicfoundation/hardhat-ethers ethers
-            </span>
-            ;
-          </code>
-        </pre>
+      <div className="bg-[#20232A] text-gray-100 p-4 rounded-lg mt-4 overflow-auto">
+        <code>
+          <span className="text-orange-400">npm install </span>
+          <span>
+            --dev @nomicfoundation/hardhat-chai-matchers chai@4
+            @nomicfoundation/hardhat-ethers ethers
+          </span>
+          ;
+        </code>
       </div>
 
       <h2 className="font-bold text-lg mt-4">Usage</h2>
       <p className="mt-2">
         After installing it, add the plugin to your Hardhat config:
       </p>
-      <div className="bg-[#20232A] text-gray-100 p-4 rounded-lg mt-4 overflow-x-auto">
-        <pre className="whitespace-pre-wrap">
-          <code>require("@nomicfoundation/hardhat-chai-matchers");</code>
-        </pre>
+      <div className="bg-[#20232A] text-gray-100 p-4 rounded-lg mt-4 overflow-auto">
+        <code>
+          <span className="text-orange-400">require</span>
+          <span>("@nomicfoundation/hardhat-chai-matchers");</span>
+        </code>
       </div>
       <p className="mt-2">
         Then you'll be able to use the matchers in your tests:
       </p>
-      <div className="bg-[#20232A] text-gray-100 p-4 rounded-lg mt-4 overflow-x-auto">
-        <pre className="whitespace-pre-wrap">
-          <code>
-            expect(await token.totalSupply()).to.equal(1_000_000);
-            {"\n\n"}
-            await expect(token.transfer(token, 1000)).to.be.revertedWith(
-            {"\n"}
-            {"  "} "Cannot transfer to the contract itself"
-            {"\n"}
-            );
-            {"\n\n"}
-            await expect(token.transfer(recipient, 1000))
-            {"\n"}
-            {"  "}.to.emit(token, "Transfer")
-            {"\n"}
-            {"  "}.withArgs(owner, recipient, 1000);
-          </code>
-        </pre>
+      <div className="bg-[#20232A] text-gray-100 p-4 rounded-lg mt-4 overflow-auto">
+        <code>
+          expect(await token.totalSupply()).to.equal(1_000_000);
+          {"\n\n"}
+          await expect(token.transfer(token, 1000)).to.be.revertedWith(
+          {"\n"}
+          {"  "} "Cannot transfer to the contract itself"
+          {"\n"}
+          );
+          {"\n\n"}
+          await expect(token.transfer(recipient, 1000))
+          {"\n"}
+          {"  "}.to.emit(token, "Transfer")
+          {"\n"}
+          {"  "}.withArgs(owner, recipient, 1000);
+        </code>
       </div>
 
       <h2 className="font-bold text-lg mt-4">Known issues</h2>
@@ -113,7 +106,7 @@ const HardhatChaiMatchers = ({ isDarkMode }) => {
         </li>
       </ul>
       <p className="mt-2">Which means you can't do:</p>
-      <div className="bg-[#20232A] text-gray-100 p-4 rounded-lg mt-4 overflow-x-auto">
+      <div className="bg-[#20232A] text-gray-100 p-4 rounded-lg mt-4 overflow-auto">
         <pre className="whitespace-pre-wrap">
           <code>
             await expect(contract.f(...))
@@ -128,7 +121,7 @@ const HardhatChaiMatchers = ({ isDarkMode }) => {
         To work around this limitation, write separate assertions for each
         matcher:
       </p>
-      <div className="bg-[#20232A] text-gray-100 p-4 rounded-lg mt-4 overflow-x-auto">
+      <div className="bg-[#20232A] text-gray-100 p-4 rounded-lg mt-4 overflow-auto">
         <pre className="whitespace-pre-wrap">
           <code>
             const tx = contract.f(...);
@@ -144,6 +137,23 @@ const HardhatChaiMatchers = ({ isDarkMode }) => {
         matchers, please visit the GitHub issue #4235 and leave an upvote or
         comment.
       </p>
+      <br />
+      <div class="border-t border-gray-600 pt-4 mt-24 flex justify-center gap-2 xs:justify-between items-center text-tertiary text-[10px] sm:text-xs flex-wrap">
+        <a
+          href="nomicfoundation-hardhat-toolbox"
+          class="flex items-center space-x-2 "
+        >
+          <span>&larr;</span>
+          <span>@nomicfoundation/hardhat-toolbox</span>
+        </a>
+        <a
+          href="nomicfoundation-hardhat-chai-matchers"
+          class="flex items-center space-x-2 "
+        >
+          <span>@nomicfoundation-hardhat-chai-matchers</span>
+          <span>&rarr;</span>
+        </a>
+      </div>
     </section>
   )
 }

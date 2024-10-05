@@ -150,20 +150,18 @@ const HardhatToolbox = ({ isDarkMode }) => {
         this issue, the Toolbox re-exports the Hardhat Network Helpers. You can
         use them like this:
       </p>
-      <div className="bg-[#20232A] text-gray-100 p-4 rounded-lg mt-4 overflow-x-auto">
-        <pre className="whitespace-pre-wrap ">
-          <code>
-            <span className="text-blue-400">import</span> helpers{" "}
-            <span className="text-blue-400">from</span>{" "}
-            <span className="text-green-400">
-              "@nomicfoundation/hardhat-toolbox/network-helpers"
-            </span>
-            ;
-          </code>
-        </pre>
+      <div className="bg-[#20232A] text-gray-100 p-4 rounded-lg mt-4 overflow-auto">
+        <code>
+          <span className="text-blue-400">import</span> helpers{" "}
+          <span className="text-blue-400">from</span>{" "}
+          <span className="text-green-400">
+            "@nomicfoundation/hardhat-toolbox/network-helpers"
+          </span>
+          ;
+        </code>
       </div>
       <br />
-      <div class="border-t border-gray-600 pt-4 flex justify-between text-tertiary text-xs">
+      <div class="border-t border-gray-600 pt-4 flex justify-between text-tertiary text-[10px] sm:text-xs">
         <a href="#" class="flex items-center space-x-2 ">
           <span>&larr;</span>
           <span>Environment variables</span>
