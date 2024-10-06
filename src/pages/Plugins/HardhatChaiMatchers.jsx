@@ -1,9 +1,57 @@
+// import CodeSnippet from "../../components/CodeSnippet"
+
+// const HardhatChaiMatchers = () => {
+//   const exampleCode = `
+//   function greet(name) {
+//     return 'Hello, ' + name + '!';
+//   }
+
+//   console.log(greet('World')); // Output: Hello, World!
+//   `
+
+//   return (
+//     <>
+//       <h1 className="text-2xl font-bold mb-4">Code Snippet Example</h1>
+//       <CodeSnippet
+//         code={exampleCode}
+//         language="javascript"
+//         showLineNumbers={true}
+//         isCopyable={true}
+//         highlight="2-3"
+//       />
+//     </>
+//   )
+// }
+
+// export default HardhatChaiMatchers
+
 import React from "react"
+import CodeSnippet from "../../components/CodeSnippet"
 
 const HardhatChaiMatchers = ({ isDarkMode }) => {
+  const snippet1 = `npm install --save-dev @nomicfoundation/hardhat-chai-matchers`
+  const snippet2 = `npm install --save-dev @nomicfoundation/hardhat-chai-matchers chai@4 @nomicfoundation/hardhat-ethers ethers`
+  const snippet3 = `yarn add --dev @nomicfoundation/hardhat-chai-matchers chai@4 @nomicfoundation/hardhat-ethers ethers`
+  const snippet4 = `require("@nomicfoundation/hardhat-chai-matchers");`
+  const snippet5 = `expect(await token.totalSupply()).to.equal(1_000_000);
+
+await expect(token.transfer(token, 1000)).to.be.revertedWith(
+  "Cannot transfer to the contract itself"
+);
+
+await expect(token.transfer(recipient, 1000))
+  .to.emit(token, "Transfer")
+  .withArgs(owner, recipient, 1000);`
+  const snippet6 = `await expect(contract.f(...))
+  .to.changeEtherBalance(...)
+  .and.to.changeTokenBalance(...)`
+  const snippet7 = `const tx = contract.f(...);
+await expect(tx).to.changeEtherBalance(...)
+await expect(tx).to.changeTokenBalance(...)`
+
   return (
     <section
-      className={`p-6 lg:px-36 text-sm font-light flex flex-col space-y-4 ${
+      className={`p-6 lg:px-36 mx-auto max-w-4xl text-sm font-light flex flex-col space-y-4 ${
         isDarkMode ? "text-black" : "text-gray-300"
       } `}
     >
@@ -23,68 +71,49 @@ const HardhatChaiMatchers = ({ isDarkMode }) => {
         We recommend using npm 7 or later. If you do that, then you just need to
         install the plugin itself:
       </p>
-      <div className="bg-[#20232A] text-gray-100 p-4 rounded-lg mt-4 overflow-auto">
-        <code>
-          <span className="text-orange-400">npm install </span>
-          <span>--save-dev @nomicfoundation/hardhat-chai-matchers</span>;
-        </code>
-      </div>
+      <CodeSnippet
+        code={snippet1}
+        language="javascript"
+        showLineNumbers={true}
+        isCopyable={true}
+      />
       <p className="mt-2">
         If you are using an older version of npm, you'll also need to install
         all the packages used by the plugin.
       </p>
-      <div className="bg-[#20232A] text-gray-100 p-4 rounded-lg mt-4 overflow-auto">
-        <code>
-          <span className="text-orange-400">npm install </span>
-          <span>
-            --save-dev @nomicfoundation/hardhat-chai-matchers chai@4
-            @nomicfoundation/hardhat-ethers ethers
-          </span>
-          ;
-        </code>
-      </div>
+      <CodeSnippet
+        code={snippet2}
+        language="javascript"
+        showLineNumbers={true}
+        isCopyable={true}
+      />
       <p className="mt-2">That's also the case if you are using yarn:</p>
-      <div className="bg-[#20232A] text-gray-100 p-4 rounded-lg mt-4 overflow-auto">
-        <code>
-          <span className="text-orange-400">npm install </span>
-          <span>
-            --dev @nomicfoundation/hardhat-chai-matchers chai@4
-            @nomicfoundation/hardhat-ethers ethers
-          </span>
-          ;
-        </code>
-      </div>
+      <CodeSnippet
+        code={snippet3}
+        language="javascript"
+        showLineNumbers={true}
+        isCopyable={true}
+      />
 
       <h2 className="font-bold text-lg mt-4">Usage</h2>
       <p className="mt-2">
         After installing it, add the plugin to your Hardhat config:
       </p>
-      <div className="bg-[#20232A] text-gray-100 p-4 rounded-lg mt-4 overflow-auto">
-        <code>
-          <span className="text-orange-400">require</span>
-          <span>("@nomicfoundation/hardhat-chai-matchers");</span>
-        </code>
-      </div>
+      <CodeSnippet
+        code={snippet4}
+        language="javascript"
+        showLineNumbers={true}
+        isCopyable={true}
+      />
       <p className="mt-2">
         Then you'll be able to use the matchers in your tests:
       </p>
-      <div className="bg-[#20232A] text-gray-100 p-4 rounded-lg mt-4 overflow-auto">
-        <code>
-          expect(await token.totalSupply()).to.equal(1_000_000);
-          {"\n\n"}
-          await expect(token.transfer(token, 1000)).to.be.revertedWith(
-          {"\n"}
-          {"  "} "Cannot transfer to the contract itself"
-          {"\n"}
-          );
-          {"\n\n"}
-          await expect(token.transfer(recipient, 1000))
-          {"\n"}
-          {"  "}.to.emit(token, "Transfer")
-          {"\n"}
-          {"  "}.withArgs(owner, recipient, 1000);
-        </code>
-      </div>
+      <CodeSnippet
+        code={snippet5}
+        language="javascript"
+        showLineNumbers={true}
+        isCopyable={true}
+      />
 
       <h2 className="font-bold text-lg mt-4">Known issues</h2>
       <h3 className="font-bold text-md mt-2">Chaining Async Matchers</h3>
@@ -106,36 +135,32 @@ const HardhatChaiMatchers = ({ isDarkMode }) => {
         </li>
       </ul>
       <p className="mt-2">Which means you can't do:</p>
-      <div className="bg-[#20232A] text-gray-100 p-4 rounded-lg mt-4 overflow-auto">
-        <pre className="whitespace-pre-wrap">
-          <code>
-            await expect(contract.f(...))
-            {"\n"}
-            {"  "}.to.changeEtherBalance(...)
-            {"\n"}
-            {"  "}.and.to.changeTokenBalance(...);
-          </code>
-        </pre>
-      </div>
+      <CodeSnippet
+        code={snippet6}
+        language="javascript"
+        showLineNumbers={true}
+        isCopyable={true}
+      />
       <p className="mt-2">
         To work around this limitation, write separate assertions for each
         matcher:
       </p>
-      <div className="bg-[#20232A] text-gray-100 p-4 rounded-lg mt-4 overflow-auto">
-        <pre className="whitespace-pre-wrap">
-          <code>
-            const tx = contract.f(...);
-            {"\n"}
-            await expect(tx).to.changeEtherBalance(...);
-            {"\n"}
-            await expect(tx).to.changeTokenBalance(...);
-          </code>
-        </pre>
-      </div>
+      <CodeSnippet
+        code={snippet6}
+        language="javascript"
+        showLineNumbers={true}
+        isCopyable={true}
+      />
       <p className="mt-2">
         If you are interested in seeing an implementation of chaining for async
-        matchers, please visit the GitHub issue #4235 and leave an upvote or
-        comment.
+        matchers, please visit the GitHub issue{" "}
+        <a
+          className="text-tertiary"
+          href="https://github.com/NomicFoundation/hardhat/issues/4235"
+        >
+          #4235
+        </a>{" "}
+        and leave an upvote or comment.
       </p>
       <br />
       <div class="border-t border-gray-600 pt-4 mt-24 flex justify-center gap-2 xs:justify-between items-center text-tertiary text-[10px] sm:text-xs flex-wrap">
@@ -147,10 +172,10 @@ const HardhatChaiMatchers = ({ isDarkMode }) => {
           <span>@nomicfoundation/hardhat-toolbox</span>
         </a>
         <a
-          href="nomicfoundation-hardhat-chai-matchers"
+          href="nomicfoundation-hardhat-ethers"
           class="flex items-center space-x-2 "
         >
-          <span>@nomicfoundation-hardhat-chai-matchers</span>
+          <span>@nomicfoundation-hardhat-ethers</span>
           <span>&rarr;</span>
         </a>
       </div>

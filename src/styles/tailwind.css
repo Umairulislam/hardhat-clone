@@ -130,3 +130,28 @@ html {
 .swiper-button-prev::after {
   @apply text-base;
 }
+
+/* Custom scrollbar styles */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: #e0e0e0; /* Light grey background */
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: #888888; /* Dark grey thumb, visible on both dark and light modes */
+  border-radius: 10px;
+  border: 2px solid transparent;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background-color: #555555; /* Slightly darker on hover */
+}
+
+/* For other browsers that support scrollbars */
+* {
+  scrollbar-width: thin;
+  scrollbar-color: #888888 #e0e0e0;
+}

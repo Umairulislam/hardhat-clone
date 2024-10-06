@@ -1,10 +1,11 @@
 import React from "react"
-import "../../styles/tailwind.css"
+import CodeSnippet from "../../components/CodeSnippet"
 
 const HardhatToolbox = ({ isDarkMode }) => {
+  const snippet1 = `import helpers from "@nomicfoundation/hardhat-toolbox/network-helpers";`
   return (
     <section
-      className={`p-6 lg:px-36 text-sm font-light flex flex-col space-y-4 ${
+      className={`p-6 lg:px-36 mx-auto max-w-4xl text-sm font-light flex flex-col space-y-4 ${
         isDarkMode ? "text-black" : "text-gray-300"
       } `}
     >
@@ -150,16 +151,12 @@ const HardhatToolbox = ({ isDarkMode }) => {
         this issue, the Toolbox re-exports the Hardhat Network Helpers. You can
         use them like this:
       </p>
-      <div className="bg-[#20232A] text-gray-100 p-4 rounded-lg mt-4 overflow-auto">
-        <code>
-          <span className="text-blue-400">import</span> helpers{" "}
-          <span className="text-blue-400">from</span>{" "}
-          <span className="text-green-400">
-            "@nomicfoundation/hardhat-toolbox/network-helpers"
-          </span>
-          ;
-        </code>
-      </div>
+      <CodeSnippet
+        code={snippet1}
+        language="javascript"
+        showLineNumbers={true}
+        isCopyable={true}
+      />
       <br />
       <div class="border-t border-gray-600 pt-4 flex justify-between text-tertiary text-[10px] sm:text-xs">
         <a href="#" class="flex items-center space-x-2 ">
