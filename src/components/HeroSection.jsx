@@ -21,12 +21,12 @@ const HeroSection = ({ isDarkMode }) => {
         <button className="btn btn-primary mt-10">Get Started</button>
       </section>
       <section className="max-w-xl">
-        <div className="relative w-96 animate-up-down">
+        <div className="relative w-92 animate-up-down">
           <img src={isDarkMode ? ethereumLight : ethereumDark} alt="ethereum" />
-          <div className="absolute top-32 right-[70px]">
+          <div className="absolute top-32 right-6">
             <img src={heHead} alt="heHead" />
           </div>
-          <div className="absolute top-60 right-32">
+          <div className="absolute top-60 right-20">
             <img src={heEyes} alt="heEyes" />
           </div>
           <div className="absolute top-32 left-6">

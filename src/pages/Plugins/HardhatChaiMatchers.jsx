@@ -66,7 +66,7 @@ await expect(tx).to.changeTokenBalance(...)`
         more.
       </p>
 
-      <h2 className="font-bold text-lg mt-4">Installation</h2>
+      <h2 className="plugin-heading">Installation</h2>
       <p>
         We recommend using npm 7 or later. If you do that, then you just need to
         install the plugin itself:
@@ -95,7 +95,7 @@ await expect(tx).to.changeTokenBalance(...)`
         isCopyable={true}
       />
 
-      <h2 className="font-bold text-lg mt-4">Usage</h2>
+      <h2 className="plugin-heading">Usage</h2>
       <p className="mt-2">
         After installing it, add the plugin to your Hardhat config:
       </p>
@@ -115,7 +115,7 @@ await expect(tx).to.changeTokenBalance(...)`
         isCopyable={true}
       />
 
-      <h2 className="font-bold text-lg mt-4">Known issues</h2>
+      <h2 className="plugin-heading">Known issues</h2>
       <h3 className="font-bold text-md mt-2">Chaining Async Matchers</h3>
       <p className="mt-2">
         Currently, the following matchers do not support chaining:

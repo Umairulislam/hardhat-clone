@@ -120,7 +120,7 @@ const HardhatToolbox = ({ isDarkMode }) => {
           .
         </li>
       </ul>
-      <h1 className="font-bold text-lg">Usage</h1>
+      <h1 className="plugin-heading">Usage</h1>
       <p>
         To create a new project that uses the Toolbox, check our{" "}
         <a
@@ -141,7 +141,7 @@ const HardhatToolbox = ({ isDarkMode }) => {
           our migration guide.
         </a>
       </p>
-      <h1 className="font-bold text-lg">Network Helpers</h1>
+      <h1 className="plugin-heading">Network Helpers</h1>
       <p>
         {" "}
         When the Toolbox is installed using npm 7 or later, its peer

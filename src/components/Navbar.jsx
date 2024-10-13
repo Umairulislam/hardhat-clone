@@ -1,4 +1,4 @@
-import React, { useState } from "react"
+import React, { useState, useEffect } from "react"
 import { NavLink } from "react-router-dom"
 import {
   logolight,
@@ -13,6 +13,20 @@ import {
 
 const Navbar = ({ isDarkMode, toggleTheme }) => {
   const [isOpen, setIsOpen] = useState(false)
+  const [scrolled, setScrolled] = useState(false)
+
+  const handleScroll = () => {
+    const scrollTop = window.scrollY
+    if (scrollTop > 75) {
+      setScrolled(true)
+    } else {
+      setScrolled(false)
+    }
+  }
+  useEffect(() => {
+    window.addEventListener("scroll", handleScroll)
+    return () => window.removeEventListener("scroll", handleScroll)
+  }, [])
 
   const handleMenu = () => {
     setIsOpen(!isOpen)
@@ -21,7 +35,13 @@ const Navbar = ({ isDarkMode, toggleTheme }) => {
   return (
     <main>
       {/* Desktop Menu */}
-      <nav className="flex justify-between items-center gap-10 px-8 py-6 md:px-10 md:py-6">
+      <nav
+        className={`flex justify-between items-center w-full fixed top-0 z-20 gap-10 px-8 py-6 md:px-10 md:py-6 ${
+          scrolled 
+      ? (isDarkMode ? "bg-white" : "bg-zinc-900")
+      : "bg-transparent"
+        }`}
+      >
         <div>
           <NavLink to="/">
             <img
@@ -202,7 +222,7 @@ const Navbar = ({ isDarkMode, toggleTheme }) => {
 
       {/* Mobile Menu Icon */}
       <section className="md:hidden absolute top-6 right-6">
-        <button onClick={handleMenu} className="w-10 h-10">
+        <button onClick={handleMenu} className="w-10 h-10 z-30 relative">
           {isOpen ? (
             <ClearIcon style={{ width: "32px", height: "32px" }} />
           ) : (

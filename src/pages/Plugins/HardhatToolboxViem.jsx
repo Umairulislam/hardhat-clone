@@ -56,7 +56,7 @@ const HardhatToolboxViem = ({ isDarkMode }) => {
           read more <span className="text-tertiary">here.</span>
         </li>
       </ul>
-      <h1 className="font-bold text-lg">Usage</h1>
+      <h1 className="plugin-heading">Usage</h1>
       <p>
         To create a new project that uses the Toolbox, check our{" "}
         <a
@@ -72,7 +72,7 @@ const HardhatToolboxViem = ({ isDarkMode }) => {
         <span className="text-tertiary">Setting up a project guide</span> but
         select the Create a TypeScript project (with Viem) option instead.
       </p>
-      <h1 className="font-bold text-lg">Network Helpers</h1>
+      <h1 className="plugin-heading">Network Helpers</h1>
       <p>
         {" "}
         When the Toolbox is installed using npm 7 or later, its peer

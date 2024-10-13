@@ -5,16 +5,54 @@ const HardhatEthers = ({ isDarkMode }) => {
   const snippet1 = `npm install --save-dev @nomicfoundation/hardhat-ethers ethers`
   const snippet2 = `require("@nomicfoundation/hardhat-ethers");`
   const snippet3 = `import "@nomicfoundation/hardhat-ethers";`
-  const snippet4 = `task(
+  const snippet4 = `interface Libraries {
+  [libraryName: string]: string;
+}
+
+interface FactoryOptions {
+  signer?: ethers.Signer;
+  libraries?: Libraries;
+}
+
+function deployContract(name: string, constructorArgs?: any[], signer?: ethers.Signer): Promise<ethers.Contract>;
+
+function getContractFactory(name: string, signer?: ethers.Signer): Promise<ethers.ContractFactory>;
+
+function getContractFactory(name: string, factoryOptions: FactoryOptions): Promise<ethers.ContractFactory>;
+
+function getContractFactory(abi: any[], bytecode: ethers.utils.BytesLike, signer?: ethers.Signer): Promise<ethers.ContractFactory>;
+
+function getContractAt(name: string, address: string, signer?: ethers.Signer): Promise<ethers.Contract>;
+
+function getContractAt(abi: any[], address: string, signer?: ethers.Signer): Promise<ethers.Contract>;
+
+function getSigners() => Promise<ethers.Signer[]>;
+
+function getSigner(address: string) => Promise<ethers.Signer>;
+
+function getImpersonatedSigner(address: string) => Promise<ethers.Signer>;
+
+function getContractFactoryFromArtifact(artifact: Artifact, signer?: ethers.Signer): Promise<ethers.ContractFactory>;
+
+function getContractFactoryFromArtifact(artifact: Artifact, factoryOptions: FactoryOptions): Promise<ethers.ContractFactory>;
+
+function getContractAtFromArtifact(artifact: Artifact, address: string, signer?: ethers.Signer): Promise<ethers.Contract>;`
+
+  const snippet5 = `require("@nomicfoundation/hardhat-ethers");
+
+// task action function receives the Hardhat Runtime Environment as second argument
+task(
   "blockNumber",
   "Prints the current block number",
   async (_, { ethers }) => {
     const blockNumber = await ethers.provider.getBlockNumber();
     console.log("Current block number: " + blockNumber);
   }
-);`
+);
 
-  const snippet5 = `const contractFactory = await this.env.ethers.getContractFactory("Example", {
+module.exports = {};`
+
+  const snippet6 = `const contractFactory = await this.env.ethers.getContractFactory("Example", {
   libraries: {
     ExampleLib: "0x...",
   },
@@ -32,15 +70,13 @@ const HardhatEthers = ({ isDarkMode }) => {
         with <span className="text-tertiary">ethers.js</span>.
       </p>
 
-      <h2 className="font-bold text-lg mt-4 border-b-[1px] border-gray-600 ">
-        What
-      </h2>
+      <h2 className="plugin-heading border-b-[1px] border-gray-600">What</h2>
       <p>
         This plugin brings to Hardhat the Ethereum library ethers.js, which
         allows you to interact with the Ethereum blockchain in a simple way.
       </p>
 
-      <h2 className="font-bold text-lg mt-4 border-b-[1px] border-gray-600">
+      <h2 className="plugin-heading border-b-[1px] border-gray-600">
         Installation
       </h2>
       <CodeSnippet
@@ -66,12 +102,10 @@ const HardhatEthers = ({ isDarkMode }) => {
         isCopyable={true}
       />
 
-      <h2 className="font-bold text-lg mt-4 border-b-[1px] border-gray-600">
-        Tasks
-      </h2>
+      <h2 className="plugin-heading border-b-[1px] border-gray-600">Tasks</h2>
       <p>This plugin creates no additional tasks.</p>
 
-      <h2 className="font-bold text-lg mt-4 border-b-[1px] border-gray-600">
+      <h2 className="plugin-heading border-b-[1px] border-gray-600">
         Environment extensions
       </h2>
       <p>
@@ -92,38 +126,7 @@ const HardhatEthers = ({ isDarkMode }) => {
       <h2 className="font-bold text-lg mt-4">Helpers</h2>
       <p>These helpers are added to the ethers object:</p>
       <CodeSnippet
-        code={`interface Libraries {
-  [libraryName: string]: string;
-}
-
-interface FactoryOptions {
-  signer?: ethers.Signer;
-  libraries?: Libraries;
-}
-
-function deployContract(name: string, constructorArgs?: any[], signer?: ethers.Signer): Promise<ethers.Contract>;
-
-function getContractFactory(name: string, signer?: ethers.Signer): Promise<ethers.ContractFactory>;
-
-function getContractFactory(name: string, factoryOptions: FactoryOptions): Promise<ethers.ContractFactory>;
-
-function getContractFactory(abi: any[], bytecode: ethers.utils.BytesLike, signer?: ethers.Signer): Promise<ethers.ContractFactory>;
-
-function getContractAt(name: string, address: string, signer?: ethers.Signer): Promise<ethers.Contract>;
-
-function getContractAt(abi: any[], address: string, signer?: ethers.Signer): Promise<ethers.Contract>;
-
-function getSigners(): Promise<ethers.Signer[]>;
-
-function getSigner(address: string): Promise<ethers.Signer>;
-
-function getImpersonatedSigner(address: string): Promise<ethers.Signer>;
-
-function getContractFactoryFromArtifact(artifact: Artifact, signer?: ethers.Signer): Promise<ethers.ContractFactory>;
-
-function getContractFactoryFromArtifact(artifact: Artifact, factoryOptions: FactoryOptions): Promise<ethers.ContractFactory>;
-
-function getContractAtFromArtifact(artifact: Artifact, address: string, signer?: ethers.Signer): Promise<ethers.Contract>;`}
+        code={snippet4}
         language="typescript"
         showLineNumbers={true}
         isCopyable={true}
@@ -136,29 +139,23 @@ function getContractAtFromArtifact(artifact: Artifact, address: string, signer?:
         by default.
       </p>
 
-      <h2 className="font-bold text-lg mt-4 border-b-[1px] border-gray-600">
-        Usage
-      </h2>
+      <h2 className="plugin-heading border-b-[1px] border-gray-600">Usage</h2>
       <p>
         There are no additional steps you need to take for this plugin to work.
       </p>
       <p>
-        Install it and access ethers through the <span className="text-primary">Hardhat Runtime Environment</span>
+        Install it and access ethers through the{" "}
+        <span className="text-primary">Hardhat Runtime Environment</span>
         anywhere you need it (tasks, scripts, tests, etc). For example, in your
         hardhat.config.js:
       </p>
       <CodeSnippet
-        code={snippet2}
+        code={snippet5}
         language="javascript"
         showLineNumbers={true}
         isCopyable={true}
       />
-      <CodeSnippet
-        code={snippet4}
-        language="javascript"
-        showLineNumbers={true}
-        isCopyable={true}
-      />
+
       <p>
         And then run <code>npx hardhat blockNumber</code> to try it.
       </p>
@@ -168,16 +165,14 @@ function getContractAtFromArtifact(artifact: Artifact, address: string, signer?:
         HRE is accessible.
       </p>
 
-      <h2 className="font-bold text-lg mt-4">
-        Library linking
-      </h2>
+      <h2 className="font-bold text-lg mt-4">Library linking</h2>
       <p>
         Some contracts need to be linked with libraries before they are
         deployed. You can pass the addresses of their libraries to the
         getContractFactory function with an object like this:
       </p>
       <CodeSnippet
-        code={snippet5}
+        code={snippet6}
         language="javascript"
         showLineNumbers={true}
         isCopyable={true}
@@ -191,7 +186,7 @@ function getContractAtFromArtifact(artifact: Artifact, address: string, signer?:
         will be thrown informing you of any missing library.
       </p>
 
-      <h2 className="font-bold text-lg mt-4 border-b-[1px] border-gray-600">
+      <h2 className="plugin-heading border-b-[1px] border-gray-600">
         Troubleshooting
       </h2>
       <h3 className="font-bold text-md mt-2">Events are not being emitted</h3>
