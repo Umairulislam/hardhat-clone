@@ -10,6 +10,15 @@ import {
   HardhatChaiMatchers,
   HardhatEthers,
   HardhatViem,
+  HardhatVerify,
+  HardhatFoundry,
+  HardhatLedger,
+  HardhatWeb3V4,
+  HardhatVyper,
+  HardhatWaffle,
+  HardhatSolhint,
+  HardhatWeb3,
+  HardhatTruffle5,
 } from "./pages/Plugins"
 import { Docs, DocsLayout, GettingStarted } from "./pages/Docs"
 import { Tutorial } from "./pages/Tutorial"
@@ -63,6 +72,42 @@ const App = () => {
             <Route
               path="nomicfoundation-hardhat-viem"
               element={<HardhatViem isDarkMode={isDarkMode} />}
+            />
+            <Route
+              path="nomicfoundation-hardhat-verify"
+              element={<HardhatVerify isDarkMode={isDarkMode} />}
+            />
+            <Route
+              path="nomicfoundation-hardhat-foundry"
+              element={<HardhatFoundry isDarkMode={isDarkMode} />}
+            />
+            <Route
+              path="nomicfoundation-hardhat-ledger"
+              element={<HardhatLedger isDarkMode={isDarkMode} />}
+            />
+            <Route
+              path="nomicfoundation-hardhat-web3-v4"
+              element={<HardhatWeb3V4 isDarkMode={isDarkMode} />}
+            />
+            <Route
+              path="nomiclabs-hardhat-vyper"
+              element={<HardhatVyper isDarkMode={isDarkMode} />}
+            />
+            <Route
+              path="nomiclabs-hardhat-solhint"
+              element={<HardhatSolhint isDarkMode={isDarkMode} />}
+            />
+            <Route
+              path="nomiclabs-hardhat-waffle"
+              element={<HardhatWaffle isDarkMode={isDarkMode} />}
+            />
+            <Route
+              path="nomiclabs-hardhat-web3"
+              element={<HardhatWeb3 isDarkMode={isDarkMode} />}
+            />
+            <Route
+              path="nomiclabs-hardhat-truffle5"
+              element={<HardhatTruffle5 isDarkMode={isDarkMode} />}
             />
           </Route>
 

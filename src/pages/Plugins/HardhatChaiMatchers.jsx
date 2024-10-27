@@ -1,32 +1,6 @@
-// import CodeSnippet from "../../components/CodeSnippet"
-
-// const HardhatChaiMatchers = () => {
-//   const exampleCode = `
-//   function greet(name) {
-//     return 'Hello, ' + name + '!';
-//   }
-
-//   console.log(greet('World')); // Output: Hello, World!
-//   `
-
-//   return (
-//     <>
-//       <h1 className="text-2xl font-bold mb-4">Code Snippet Example</h1>
-//       <CodeSnippet
-//         code={exampleCode}
-//         language="javascript"
-//         showLineNumbers={true}
-//         isCopyable={true}
-//         highlight="2-3"
-//       />
-//     </>
-//   )
-// }
-
-// export default HardhatChaiMatchers
-
 import React from "react"
-import CodeSnippet from "../../components/CodeSnippet"
+import { CodeSnippet } from "../../components"
+import { Link } from "react-router-dom"
 
 const HardhatChaiMatchers = ({ isDarkMode }) => {
   const snippet1 = `npm install --save-dev @nomicfoundation/hardhat-chai-matchers`
@@ -51,7 +25,7 @@ await expect(tx).to.changeTokenBalance(...)`
 
   return (
     <section
-      className={`p-6 lg:px-36 mx-auto max-w-4xl text-sm font-light flex flex-col space-y-4 ${
+      className={`p-6 lg:px-36 mx-auto max-w-4xl text-sm font-light flex flex-col space-y-6 ${
         isDarkMode ? "text-black" : "text-gray-300"
       } `}
     >
@@ -164,20 +138,20 @@ await expect(tx).to.changeTokenBalance(...)`
       </p>
       <br />
       <div class="border-t border-gray-600 pt-4 mt-24 flex justify-center gap-2 xs:justify-between items-center text-tertiary text-[10px] sm:text-xs flex-wrap">
-        <a
-          href="nomicfoundation-hardhat-toolbox"
+        <Link
+          to="/hardhat-runner/plugins/nomicfoundation-hardhat-toolbox"
           class="flex items-center space-x-2 "
         >
           <span>&larr;</span>
           <span>@nomicfoundation/hardhat-toolbox</span>
-        </a>
-        <a
-          href="nomicfoundation-hardhat-ethers"
+        </Link>
+        <Link
+          to="/hardhat-runner/plugins/nomicfoundation-hardhat-ethers"
           class="flex items-center space-x-2 "
         >
           <span>@nomicfoundation-hardhat-ethers</span>
           <span>&rarr;</span>
-        </a>
+        </Link>
       </div>
     </section>
   )

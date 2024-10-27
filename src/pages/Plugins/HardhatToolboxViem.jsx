@@ -1,12 +1,13 @@
 import React from "react"
-import CodeSnippet from "../../components/CodeSnippet"
+import { CodeSnippet } from "../../components"
+import { Link } from "react-router-dom"
 
 const HardhatToolboxViem = ({ isDarkMode }) => {
   const snippet1 = `import helpers from "@nomicfoundation/hardhat-toolbox/network-helpers";`
 
   return (
     <section
-      className={`p-6 lg:px-36 mx-auto max-w-4xl text-sm font-light flex flex-col space-y-4 ${
+      className={`p-6 lg:px-36 mx-auto max-w-4xl text-sm font-light flex flex-col space-y-6 ${
         isDarkMode ? "text-black" : "text-gray-300"
       } `}
     >
@@ -90,20 +91,20 @@ const HardhatToolboxViem = ({ isDarkMode }) => {
       />
       <br />
       <div class="border-t border-gray-600 pt-4 mt-24 flex justify-center gap-2 xs:justify-between items-center text-tertiary text-[10px] sm:text-xs flex-wrap">
-        <a
-          href="nomicfoundation-hardhat-toolbox"
+        <Link
+          to="/hardhat-runner/plugins/nomicfoundation-hardhat-toolbox"
           class="flex items-center space-x-2 "
         >
           <span>&larr;</span>
           <span>@nomicfoundation/hardhat-toolbox</span>
-        </a>
-        <a
-          href="nomicfoundation-hardhat-chai-matchers"
+        </Link>
+        <Link
+          to="/hardhat-runner/plugins/nomicfoundation-hardhat-chai-matchers"
           class="flex items-center space-x-2 "
         >
           <span>@nomicfoundation-hardhat-chai-matchers</span>
           <span>&rarr;</span>
-        </a>
+        </Link>
       </div>
     </section>
   )

@@ -1,11 +1,12 @@
 import React from "react"
-import CodeSnippet from "../../components/CodeSnippet"
+import { CodeSnippet } from "../../components"
+import { Link } from "react-router-dom"
 
 const HardhatToolbox = ({ isDarkMode }) => {
   const snippet1 = `import helpers from "@nomicfoundation/hardhat-toolbox/network-helpers";`
   return (
     <section
-      className={`p-6 lg:px-36 mx-auto max-w-4xl text-sm font-light flex flex-col space-y-4 ${
+      className={`p-6 lg:px-36 mx-auto max-w-4xl text-sm font-light flex flex-col space-y-6 ${
         isDarkMode ? "text-black" : "text-gray-300"
       } `}
     >
@@ -159,17 +160,20 @@ const HardhatToolbox = ({ isDarkMode }) => {
       />
       <br />
       <div class="border-t border-gray-600 pt-4 flex justify-between text-tertiary text-[10px] sm:text-xs">
-        <a href="#" class="flex items-center space-x-2 ">
+        <Link
+          to="/hardhat-runner/plugins/#"
+          class="flex items-center space-x-2 "
+        >
           <span>&larr;</span>
           <span>Environment variables</span>
-        </a>
-        <a
-          href="nomicfoundation-hardhat-toolbox-viem"
+        </Link>
+        <Link
+          to="/hardhat-runner/plugins/nomicfoundation-hardhat-toolbox-viem"
           class="flex items-center space-x-2 "
         >
           <span>@nomicfoundation/hardhat-toolbox-viem</span>
           <span>&rarr;</span>
-        </a>
+        </Link>
       </div>
     </section>
   )

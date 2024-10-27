@@ -1,7 +1,5 @@
-import { CodeBlock, CopyBlock, dracula } from "react-code-blocks"
-import React, { useEffect, useState } from "react"
-import ContentCopyIcon from "@mui/icons-material/ContentCopy"
-import CheckIcon from "@mui/icons-material/Check"
+import { CodeBlock, CopyBlock, github, dracula } from "react-code-blocks"
+import React from "react"
 
 const CodeSnippet = ({
   code,
@@ -11,15 +9,6 @@ const CodeSnippet = ({
   highlight = "", // for highlighting specific lines
   theme = dracula, // default theme
 }) => {
-  // Copy to clipboard functionality
-  //   const [isCopied, setIsCopied] = useState(false)
-
-  //   const handleCopy = () => {
-  //     navigator.clipboard.writeText(code)
-  //     setIsCopied(true)
-  //     setTimeout(() => setIsCopied(false), 2000) // Reset after 2 seconds
-  //   }
-
   return (
     <div className="w-[300px] xs:w-[400px] sm:w-[580px] md:w-full text-xs border rounded-md bg-[#282A36] overflow-auto">
       {isCopyable ? (
