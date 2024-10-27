@@ -1,7 +1,10 @@
 import React from "react"
 import { Link } from "react-router-dom"
+import { useSelector } from "react-redux"
 
-const HardhatWaffle = ({ isDarkMode }) => {
+const HardhatWaffle = () => {
+  const isDarkMode = useSelector((state) => state.theme.isDarkMode)
+
   return (
     <section
       className={`p-6 lg:px-36 mx-auto max-w-4xl text-sm font-light flex flex-col space-y-6 ${

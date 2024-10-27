@@ -1,7 +1,9 @@
 import React, { useState } from "react"
 import { tools } from "../constants"
+import { useSelector } from "react-redux"
 
-const ToolSection = ({ isDarkMode }) => {
+const ToolSection = () => {
+  const isDarkMode = useSelector((state) => state.theme.isDarkMode)
   const [activeTool, setActiveTool] = useState(tools[0])
 
   return (

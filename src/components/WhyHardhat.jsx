@@ -10,8 +10,11 @@ import {
   iterationDark,
   iterationLight,
 } from "../assets"
+import { useSelector } from "react-redux"
 
-const WhyHardhat = ({ isDarkMode }) => {
+const WhyHardhat = () => {
+  const isDarkMode = useSelector((state) => state.theme.isDarkMode)
+
   return (
     <main className="mt-40 ">
       <section className="flex justify-center items-center gap-6 relative text-center flex-wrap">

@@ -1,8 +1,11 @@
 import React from "react"
 import { CodeSnippet } from "../../components"
+import { useSelector } from "react-redux"
 import { Link } from "react-router-dom"
 
-const HardhatChaiMatchers = ({ isDarkMode }) => {
+const HardhatChaiMatchers = () => {
+  const isDarkMode = useSelector((state) => state.theme.isDarkMode)
+
   const snippet1 = `npm install --save-dev @nomicfoundation/hardhat-chai-matchers`
   const snippet2 = `npm install --save-dev @nomicfoundation/hardhat-chai-matchers chai@4 @nomicfoundation/hardhat-ethers ethers`
   const snippet3 = `yarn add --dev @nomicfoundation/hardhat-chai-matchers chai@4 @nomicfoundation/hardhat-ethers ethers`

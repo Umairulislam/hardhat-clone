@@ -22,12 +22,15 @@ import {
 } from "./pages/Plugins"
 import { Docs, DocsLayout, GettingStarted } from "./pages/Docs"
 import { Tutorial } from "./pages/Tutorial"
+import { useDispatch, useSelector } from "react-redux"
+import { toggleTheme } from "./redux/themeSlice"
 
 const App = () => {
-  const [isDarkMode, setIsDarkMode] = useState(false)
+  const isDarkMode = useSelector((state) => state.theme.isDarkMode)
+  const dispatch = useDispatch()
 
-  const toggleTheme = () => {
-    setIsDarkMode(!isDarkMode)
+  const handleToggleTheme = () => {
+    dispatch(toggleTheme())
   }
 
   return (
@@ -37,77 +40,65 @@ const App = () => {
       } font-sans transition-all duration-300 min-h-screen`}
     >
       <Router>
-        <Navbar isDarkMode={isDarkMode} toggleTheme={toggleTheme} />
+        <Navbar isDarkMode={isDarkMode} toggleTheme={handleToggleTheme} />
         <Routes>
-          <Route path="/" element={<Home isDarkMode={isDarkMode} />} />
+          <Route path="/" element={<Home />} />
           <Route path="/tutorial" element={<Tutorial />} />
 
           {/* Plugins Page Page without Sidebar */}
-          <Route
-            path="/hardhat-runner/plugins"
-            element={<Plugins isDarkMode={isDarkMode} />}
-          />
+          <Route path="/hardhat-runner/plugins" element={<Plugins />} />
 
           {/* Plugins Detail with Sidebar */}
-          <Route
-            path="/hardhat-runner/plugins"
-            element={<PluginsLayout isDarkMode={isDarkMode} />}
-          >
+          <Route path="/hardhat-runner/plugins" element={<PluginsLayout />}>
             <Route
               path="nomicfoundation-hardhat-toolbox"
-              element={<HardhatToolbox isDarkMode={isDarkMode} />}
+              element={<HardhatToolbox />}
             />
             <Route
               path="nomicfoundation-hardhat-toolbox-viem"
-              element={<HardhatToolboxViem isDarkMode={isDarkMode} />}
+              element={<HardhatToolboxViem />}
             />
             <Route
               path="nomicfoundation-hardhat-chai-matchers"
-              element={<HardhatChaiMatchers isDarkMode={isDarkMode} />}
+              element={<HardhatChaiMatchers />}
             />
             <Route
               path="nomicfoundation-hardhat-ethers"
-              element={<HardhatEthers isDarkMode={isDarkMode} />}
+              element={<HardhatEthers />}
             />
             <Route
               path="nomicfoundation-hardhat-viem"
-              element={<HardhatViem isDarkMode={isDarkMode} />}
+              element={<HardhatViem />}
             />
             <Route
               path="nomicfoundation-hardhat-verify"
-              element={<HardhatVerify isDarkMode={isDarkMode} />}
+              element={<HardhatVerify />}
             />
             <Route
               path="nomicfoundation-hardhat-foundry"
-              element={<HardhatFoundry isDarkMode={isDarkMode} />}
+              element={<HardhatFoundry />}
             />
             <Route
               path="nomicfoundation-hardhat-ledger"
-              element={<HardhatLedger isDarkMode={isDarkMode} />}
+              element={<HardhatLedger />}
             />
             <Route
               path="nomicfoundation-hardhat-web3-v4"
-              element={<HardhatWeb3V4 isDarkMode={isDarkMode} />}
+              element={<HardhatWeb3V4 />}
             />
-            <Route
-              path="nomiclabs-hardhat-vyper"
-              element={<HardhatVyper isDarkMode={isDarkMode} />}
-            />
+            <Route path="nomiclabs-hardhat-vyper" element={<HardhatVyper />} />
             <Route
               path="nomiclabs-hardhat-solhint"
-              element={<HardhatSolhint isDarkMode={isDarkMode} />}
+              element={<HardhatSolhint />}
             />
             <Route
               path="nomiclabs-hardhat-waffle"
-              element={<HardhatWaffle isDarkMode={isDarkMode} />}
+              element={<HardhatWaffle />}
             />
-            <Route
-              path="nomiclabs-hardhat-web3"
-              element={<HardhatWeb3 isDarkMode={isDarkMode} />}
-            />
+            <Route path="nomiclabs-hardhat-web3" element={<HardhatWeb3 />} />
             <Route
               path="nomiclabs-hardhat-truffle5"
-              element={<HardhatTruffle5 isDarkMode={isDarkMode} />}
+              element={<HardhatTruffle5 />}
             />
           </Route>
 

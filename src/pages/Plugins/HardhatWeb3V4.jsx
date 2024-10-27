@@ -1,8 +1,11 @@
 import React from "react"
 import { Link } from "react-router-dom"
 import { CodeSnippet } from "../../components"
+import { useSelector } from "react-redux"
 
-const HardhatWeb3V4 = ({ isDarkMode }) => {
+const HardhatWeb3V4 = () => {
+  const isDarkMode = useSelector((state) => state.theme.isDarkMode)
+
   const snippet1 = `npm install --save-dev @nomicfoundation/hardhat-web3-v4 'web3@4'`
   const snippet2 = `require("@nomicfoundation/hardhat-web3-v4");`
   const snippet3 = `import "@nomifoundation/hardhat-web3-v4";`

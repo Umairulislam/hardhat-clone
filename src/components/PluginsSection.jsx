@@ -1,8 +1,10 @@
 import React, { useEffect } from "react"
 import { Link, useLocation } from "react-router-dom"
 import { officialPlugins, communityPlugins } from "../constants"
+import { useSelector } from "react-redux"
 
-const PluginsSection = ({ isDarkMode }) => {
+const PluginsSection = () => {
+  const isDarkMode = useSelector((state) => state.theme.isDarkMode)
   const location = useLocation()
 
   useEffect(() => {

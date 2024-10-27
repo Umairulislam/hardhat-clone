@@ -1,8 +1,11 @@
 import React from "react"
 import { Link } from "react-router-dom"
 import { CodeSnippet } from "../../components"
+import { useSelector } from "react-redux"
 
-const HardhatVyper = ({ isDarkMode }) => {
+const HardhatVyper = () => {
+  const isDarkMode = useSelector((state) => state.theme.isDarkMode)
+
   const snippet1 = `npm install --save-dev @nomiclabs/hardhat-vyper`
   const snippet2 = `require("@nomiclabs/hardhat-vyper");`
   const snippet3 = `import "@nomiclabs/hardhat-vyper";`

@@ -1,7 +1,9 @@
 import React, { useState } from "react"
 import { Link } from "react-router-dom"
+import { useSelector } from "react-redux"
 
-const SideNavbar = ({ isDarkMode }) => {
+const SideNavbar = () => {
+  const isDarkMode = useSelector((state) => state.theme.isDarkMode)
   const [activeMenu, setActiveMenu] = useState("")
 
   const handleMenuClick = (menu) => {
@@ -97,7 +99,7 @@ const SideNavbar = ({ isDarkMode }) => {
 
   return (
     <div
-      className={`fixed left-0 hidden lg:block w-72 h-screen overflow-y-auto p-4 ${
+      className={`fixed left-0 hidden lg:block w-80 h-screen overflow-y-auto px-4 ${
         isDarkMode ? "text-black" : "text-gray-300"
       }`}
     >
@@ -113,7 +115,7 @@ const SideNavbar = ({ isDarkMode }) => {
             >
               {section.heading}
             </h2>
-            <ul className="ml-5 text-xs font-light">
+            <ul className="ml-5 text-sm font-light">
               {section.menus.map((menu) => (
                 <li key={menu} className="py-1">
                   <Link

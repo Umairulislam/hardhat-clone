@@ -1,8 +1,11 @@
 import React from "react"
 import { Link } from "react-router-dom"
 import { CodeSnippet } from "../../components"
+import { useSelector } from "react-redux"
 
-const HardhatTruffle5 = ({ isDarkMode }) => {
+const HardhatTruffle5 = () => {
+  const isDarkMode = useSelector((state) => state.theme.isDarkMode)
+
   const snippet1 = `npm install --save-dev @nomiclabs/hardhat-truffle4 @nomiclabs/hardhat-web3-legacy web3@^0.20.7`
   const snippet2 = `require("@nomiclabs/hardhat-truffle4");`
   const snippet3 = `import "@nomiclabs/hardhat-truffle4";`

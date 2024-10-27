@@ -1,8 +1,11 @@
 import React from "react"
 import { CodeSnippet } from "../../components"
+import { useSelector } from "react-redux"
 import { Link } from "react-router-dom"
 
-const HardhatViem = ({ isDarkMode }) => {
+const HardhatViem = () => {
+  const isDarkMode = useSelector((state) => state.theme.isDarkMode)
+
   const snippet1 = `npm install --save-dev @nomicfoundation/hardhat-viem viem`
   const snippet2 = `require("@nomicfoundation/hardhat-viem");`
   const snippet3 = `import "@nomicfoundation/hardhat-viem";`

@@ -1,8 +1,11 @@
 import React from "react"
 import { CodeSnippet } from "../../components"
+import { useSelector } from "react-redux"
 import { Link } from "react-router-dom"
 
-const HardhatToolboxViem = ({ isDarkMode }) => {
+const HardhatToolboxViem = () => {
+  const isDarkMode = useSelector((state) => state.theme.isDarkMode)
+
   const snippet1 = `import helpers from "@nomicfoundation/hardhat-toolbox/network-helpers";`
 
   return (

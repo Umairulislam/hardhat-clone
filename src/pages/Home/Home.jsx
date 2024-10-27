@@ -12,22 +12,22 @@ import {
   Footer,
 } from "../../components"
 
-const Home = ({ isDarkMode }) => {
+const Home = () => {
   return (
     <main>
       <section className="custom-padding">
-        <HeroSection isDarkMode={isDarkMode} />
-        <ToolSection isDarkMode={isDarkMode} />
-        <WhyHardhat isDarkMode={isDarkMode} />
-        <CommunitySection isDarkMode={isDarkMode} />
-        <LandingBanner isDarkMode={isDarkMode} />
+        <HeroSection />
+        <ToolSection />
+        <WhyHardhat />
+        <CommunitySection />
+        <LandingBanner />
         <BrandSection />
         <TestimonialSecton />
-        <NomicFoundation isDarkMode={isDarkMode} />
+        <NomicFoundation />
       </section>
       <section>
-        <EthereumFoundation isDarkMode={isDarkMode} />
-        <Footer isDarkMode={isDarkMode} />
+        <EthereumFoundation />
+        <Footer />
       </section>
     </main>
   )

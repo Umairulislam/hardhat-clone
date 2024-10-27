@@ -1,8 +1,11 @@
 import React from "react"
 import { Link } from "react-router-dom"
 import { CodeSnippet } from "../../components"
+import { useSelector } from "react-redux"
 
-const HardhatFoundry = ({ isDarkMode }) => {
+const HardhatFoundry = () => {
+  const isDarkMode = useSelector((state) => state.theme.isDarkMode)
+
   const snippet1 = `npm install --save-dev @nomicfoundation/hardhat-ledger`
   const snippet2 = `require("@nomicfoundation/hardhat-ledger");`
   const snippet3 = `import "@nomicfoundation/hardhat-ledger";`

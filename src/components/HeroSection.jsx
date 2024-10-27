@@ -7,8 +7,11 @@ import {
   heEyes,
   sheEyes,
 } from "../assets"
+import { useSelector } from "react-redux"
 
-const HeroSection = ({ isDarkMode }) => {
+const HeroSection = () => {
+  const isDarkMode = useSelector((state) => state.theme.isDarkMode)
+  
   return (
     <main className="flex justify-center items-center gap-10 flex-wrap">
       <section className="max-w-xl">

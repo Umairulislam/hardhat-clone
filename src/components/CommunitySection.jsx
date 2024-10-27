@@ -1,7 +1,10 @@
 import React from "react"
 import { communityDark, communityLight } from "../assets"
+import { useSelector } from "react-redux"
 
-const CommunitySection = ({ isDarkMode }) => {
+const CommunitySection = () => {
+  const isDarkMode = useSelector((state) => state.theme.isDarkMode)
+
   return (
     <main
       className={`mt-40 flex justify-around flex-row-reverse items-center gap-10 flex-wrap ${
