@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react"
-import { NavLink } from "react-router-dom"
+import { NavLink, Link } from "react-router-dom"
 import {
   logolight,
   logoDark,
@@ -65,14 +65,14 @@ const Navbar = ({ isDarkMode, toggleTheme }) => {
             >
               Home
             </NavLink>
-            <a
-              href="#tools"
+            <Link
+              to="/#tools"
               className={`hover:border-b-2 ${
                 isDarkMode ? "hover:border-black" : "hover:border-white"
               }`}
             >
               Tools
-            </a>
+            </Link>
             <NavLink
               to="/hardhat-runner/plugins"
               className={({ isActive }) =>

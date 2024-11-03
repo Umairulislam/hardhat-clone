@@ -92,7 +92,7 @@ const HardhatTruffle5 = () => {
           <span>@nomiclabs/hardhat-web3</span>
         </Link>
         <Link
-          to="/hardhat-runner/plugins/plugins#community-plugins"
+          to="/hardhat-runner/plugins/#community-plugins"
           className="flex items-center space-x-2"
         >
           <span>Community plugins</span>

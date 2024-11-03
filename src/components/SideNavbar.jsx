@@ -1,14 +1,10 @@
-import React, { useState } from "react"
-import { Link } from "react-router-dom"
+import React from "react"
+import { Link, useLocation } from "react-router-dom"
 import { useSelector } from "react-redux"
 
 const SideNavbar = () => {
   const isDarkMode = useSelector((state) => state.theme.isDarkMode)
-  const [activeMenu, setActiveMenu] = useState("")
-
-  const handleMenuClick = (menu) => {
-    setActiveMenu(menu)
-  }
+  const location = useLocation()
 
   const sections = [
     {
@@ -104,43 +100,62 @@ const SideNavbar = () => {
       }`}
     >
       <nav>
-        {sections.map((section) => (
-          <div key={section.heading} className={`mb-4 `}>
-            <h2
-              className={`font-bold ${
-                section.menus.includes(activeMenu)
-                  ? "text-tertiary border-l-2 border-tertiary pl-1"
-                  : ""
-              }`}
-            >
-              {section.heading}
-            </h2>
-            <ul className="ml-5 text-sm font-light">
-              {section.menus.map((menu) => (
-                <li key={menu} className="py-1">
-                  <Link
-                    to={
-                      section.heading === "Plugins" &&
-                      menu === "Community plugins"
-                        ? "/hardhat-runner/plugins#community-plugins"
-                        : section.heading === "Plugins"
-                        ? `/hardhat-runner/plugins/${menu
-                            .replace("@", "")
-                            .replace("/", "-")}`
-                        : `/${menu.toLowerCase().replace(/ /g, "-")}`
-                    }
-                    className={`hover:text-tertiary ${
-                      activeMenu === menu ? "text-tertiary" : ""
-                    }`}
-                    onClick={() => handleMenuClick(menu)}
-                  >
-                    {menu}
-                  </Link>
-                </li>
-              ))}
-            </ul>
-          </div>
-        ))}
+        {sections.map((section) => {
+          // Check if any menu in the section is active based on location
+          const isSectionActive = section.menus.some((menu) => {
+            const linkPath =
+              section.heading === "Plugins" && menu === "Community plugins"
+                ? "/hardhat-runner/plugins#community-plugins"
+                : section.heading === "Plugins"
+                ? `/hardhat-runner/plugins/${menu
+                    .replace("@", "")
+                    .replace("/", "-")}`
+                : `/${menu.toLowerCase().replace(/ /g, "-")}`
+            return location.pathname === linkPath
+          })
+
+          return (
+            <div key={section.heading} className="mb-4">
+              <h2
+                className={`font-bold ${
+                  isSectionActive
+                    ? "text-tertiary border-l-2 border-tertiary pl-1"
+                    : ""
+                }`}
+              >
+                {section.heading}
+              </h2>
+              <ul className="ml-5 text-sm font-light">
+                {section.menus.map((menu) => {
+                  const linkPath =
+                    section.heading === "Plugins" &&
+                    menu === "Community plugins"
+                      ? "/hardhat-runner/plugins#community-plugins"
+                      : section.heading === "Plugins"
+                      ? `/hardhat-runner/plugins/${menu
+                          .replace("@", "")
+                          .replace("/", "-")}`
+                      : `/${menu.toLowerCase().replace(/ /g, "-")}`
+
+                  const isActive = location.pathname === linkPath
+
+                  return (
+                    <li key={menu} className="py-1">
+                      <Link
+                        to={linkPath}
+                        className={`hover:text-tertiary ${
+                          isActive ? "text-tertiary" : ""
+                        }`}
+                      >
+                        {menu}
+                      </Link>
+                    </li>
+                  )
+                })}
+              </ul>
+            </div>
+          )
+        })}
       </nav>
     </div>
   )

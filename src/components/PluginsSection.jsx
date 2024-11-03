@@ -49,7 +49,7 @@ const PluginsSection = () => {
           isDarkMode ? "text-black" : "text-gray-300 "
         }`}
       >
-        <h1 className={`font-semibold md:text-xl`}>Official plugins</h1>
+        <h1 className={`font-bold md:text-xl`}>Official plugins</h1>
         {officialPlugins.map((plugin) => (
           <div key={plugin.name} className="flex flex-col gap-4 mb-12">
             <div className="flex gap-2 items-center flex-wrap">
@@ -78,7 +78,7 @@ const PluginsSection = () => {
             </div>
           </div>
         ))}
-        <h1 id="community-plugins" className={`font-semibold md:text-xl`}>
+        <h1 id="community-plugins" className={`font-bold md:text-xl`}>
           Community plugins
         </h1>
         {communityPlugins.map((plugin) => (

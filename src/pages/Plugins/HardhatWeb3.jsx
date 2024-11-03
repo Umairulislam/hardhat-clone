@@ -112,7 +112,7 @@ module.exports = {};`
           <span>@nomiclabs/hardhat-waffle</span>
         </Link>
         <Link
-          to="/hardhat-runner/plugins/nomiclabs-hardhat-hardhat-truffle5"
+          to="/hardhat-runner/plugins/nomiclabs-hardhat-truffle5"
           className="flex items-center space-x-2"
         >
           <span>@nomiclabs/hardhat-hardhat-truffle5</span>

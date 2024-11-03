@@ -297,14 +297,14 @@ const officialPlugins = [
     tags: ["Solhint", "Linter"],
     foundation: "Nomic Foundation",
   },
-  {
-    id: 11,
-    name: "@nomiclabs/hardhat-solpp",
-    description:
-      "Automatically run the solpp preprocessor before each compilation",
-    tags: ["Solpp", "Preprocessor"],
-    foundation: "Nomic Foundation",
-  },
+  // {
+  //   id: 11,
+  //   name: "@nomiclabs/hardhat-solpp",
+  //   description:
+  //     "Automatically run the solpp preprocessor before each compilation",
+  //   tags: ["Solpp", "Preprocessor"],
+  //   foundation: "Nomic Foundation",
+  // },
   {
     id: 12,
     name: "@nomiclabs/hardhat-waffle",
@@ -334,20 +334,20 @@ const officialPlugins = [
     tags: ["Truffle", "Testing"],
     foundation: "Nomic Foundation",
   },
-  {
-    id: 16,
-    name: "@nomiclabs/hardhat-web3-legacy",
-    description: "Injects Web3 0.20.x into the Hardhat Runtime Environment",
-    tags: ["Web3.js", "Legacy", "Testing", "Tasks", "Scripts"],
-    foundation: "Nomic Foundation",
-  },
-  {
-    id: 17,
-    name: "@nomiclabs/hardhat-truffle4",
-    description: "Integration with TruffleContract from Truffle 4",
-    tags: ["Truffle", "Testing"],
-    foundation: "Nomic Foundation",
-  },
+  // {
+  //   id: 16,
+  //   name: "@nomiclabs/hardhat-web3-legacy",
+  //   description: "Injects Web3 0.20.x into the Hardhat Runtime Environment",
+  //   tags: ["Web3.js", "Legacy", "Testing", "Tasks", "Scripts"],
+  //   foundation: "Nomic Foundation",
+  // },
+  // {
+  //   id: 17,
+  //   name: "@nomiclabs/hardhat-truffle4",
+  //   description: "Integration with TruffleContract from Truffle 4",
+  //   tags: ["Truffle", "Testing"],
+  //   foundation: "Nomic Foundation",
+  // },
 ]
 
 const communityPlugins = [
