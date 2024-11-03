@@ -1,7 +1,21 @@
-import React from "react"
+import React, { useEffect } from "react"
+import { Link, useLocation } from "react-router-dom"
 import { officialPlugins, communityPlugins } from "../constants"
+import { useSelector } from "react-redux"
 
-const PluginsSection = ({ isDarkMode }) => {
+const PluginsSection = () => {
+  const isDarkMode = useSelector((state) => state.theme.isDarkMode)
+  const location = useLocation()
+
+  useEffect(() => {
+    if (location.hash) {
+      const element = document.getElementById(location.hash.substring(1))
+      if (element) {
+        element.scrollIntoView()
+      }
+    }
+  }, [location])
+
   return (
     <main>
       <section
@@ -35,13 +49,17 @@ const PluginsSection = ({ isDarkMode }) => {
           isDarkMode ? "text-black" : "text-gray-300 "
         }`}
       >
-        <h1 className={`font-semibold md:text-xl`}>Official plugins</h1>
+        <h1 className={`font-bold md:text-xl`}>Official plugins</h1>
         {officialPlugins.map((plugin) => (
-          <div className="flex flex-col gap-4 mb-12">
+          <div key={plugin.name} className="flex flex-col gap-4 mb-12">
             <div className="flex gap-2 items-center flex-wrap">
-              <a href="">
+              <Link
+                to={`/hardhat-runner/plugins/${plugin.name
+                  .replace("@", "")
+                  .replace("/", "-")}`}
+              >
                 <h1 className="text-tertiary font-bold">{plugin.name}</h1>
-              </a>
+              </Link>
 
               <p className="text-gray-600 text-sm">| {plugin.foundation}</p>
             </div>
@@ -50,7 +68,7 @@ const PluginsSection = ({ isDarkMode }) => {
               {plugin.tags.map((tag, index) => (
                 <span
                   key={index}
-                  class={` ${
+                  className={` ${
                     isDarkMode ? "bg-zinc-200" : "bg-zinc-800"
                   }  px-3 py-1 shadow-sm rounded `}
                 >
@@ -60,9 +78,11 @@ const PluginsSection = ({ isDarkMode }) => {
             </div>
           </div>
         ))}
-        <h1 className={`font-semibold md:text-xl`}>Community plugins</h1>
+        <h1 id="community-plugins" className={`font-bold md:text-xl`}>
+          Community plugins
+        </h1>
         {communityPlugins.map((plugin) => (
-          <div className="flex flex-col gap-4 mb-12">
+          <div key={plugin.name} className="flex flex-col gap-4 mb-12">
             <div className="flex gap-2 items-center flex-wrap">
               <a href="">
                 <h1 className="text-tertiary font-bold">{plugin.name}</h1>
@@ -75,7 +95,7 @@ const PluginsSection = ({ isDarkMode }) => {
               {plugin.tags.map((tag, index) => (
                 <span
                   key={index}
-                  class={` ${
+                  className={` ${
                     isDarkMode ? "bg-zinc-200" : "bg-zinc-800"
                   }  px-3 py-1 shadow-sm rounded `}
                 >

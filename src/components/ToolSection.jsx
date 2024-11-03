@@ -1,8 +1,21 @@
-import React, { useState } from "react"
+import React, { useState, useEffect } from "react"
 import { tools } from "../constants"
+import { Link, useLocation } from "react-router-dom"
+import { useSelector } from "react-redux"
 
-const ToolSection = ({ isDarkMode }) => {
+const ToolSection = () => {
+  const isDarkMode = useSelector((state) => state.theme.isDarkMode)
   const [activeTool, setActiveTool] = useState(tools[0])
+  const location = useLocation()
+
+  useEffect(() => {
+    if (location.hash) {
+      const element = document.getElementById(location.hash.substring(1))
+      if (element) {
+        element.scrollIntoView()
+      }
+    }
+  }, [location])
 
   return (
     <main
@@ -28,14 +41,13 @@ const ToolSection = ({ isDarkMode }) => {
               <div>
                 <img
                   src={tool.icon}
-                  alt=""
                   className={`${
                     activeTool.id === tool.id
                       ? "shadow-none"
                       : isDarkMode
                       ? "shadow-all-light"
                       : "shadow-all-dark"
-                  } p-4`}
+                  } p-4 w-20 md:w-full`}
                 />
               </div>
               <div>

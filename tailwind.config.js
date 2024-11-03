@@ -2,12 +2,13 @@
 export default {
   content: ["./index.html", "./src/**/*.{js,ts,jsx,tsx}"],
   darkMode: "class", // Enables class-based dark mode
+
   theme: {
     extend: {
       colors: {
         primary: "#FFF100", // Yellow color used button
         secondary: "#20232A", // Dark background color on community section
-        tertiary: "#EDCF00", // Yellow color for text in plugins
+        tertiary: "#CCB200", // Yellow color for text in plugins
         darkBackground: "#181A1F", // Background color for dark mode
         lightBackground: "#FFFFFF", // Background color for light mode
         darkText: "#181A1F", // Light text for dark mode
@@ -19,7 +20,8 @@ export default {
         mono: ["Fira Code", "monospace"], // Monospace font for code snippets
       },
       screens: {
-        sm: "425px", // small screen
+        xs: "480px", // Extra small screen
+        sm: "640px", // small screen
         md: "768px", // Medium screen
         lg: "1024px", // Large screen
         xl: "1280px", // Extra large screen
