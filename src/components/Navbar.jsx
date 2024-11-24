@@ -37,9 +37,11 @@ const Navbar = ({ isDarkMode, toggleTheme }) => {
       {/* Desktop Menu */}
       <nav
         className={`flex justify-between items-center w-full fixed top-0 z-20 gap-10 px-8 py-6 md:px-10 md:py-6 ${
-          scrolled 
-      ? (isDarkMode ? "bg-white" : "bg-zinc-900")
-      : "bg-transparent"
+          scrolled
+            ? isDarkMode
+              ? "bg-white"
+              : "bg-zinc-900"
+            : "bg-transparent"
         }`}
       >
         <div>
@@ -95,7 +97,7 @@ const Navbar = ({ isDarkMode, toggleTheme }) => {
                     }`
               }
             >
-              Docs
+              Documentation
             </NavLink>
             <NavLink
               to="/tutorial"

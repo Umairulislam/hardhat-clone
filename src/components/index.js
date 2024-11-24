@@ -14,6 +14,7 @@ import PluginsSection from "./PluginsSection"
 import SideNavbar from "./SideNavbar"
 import CodeBlock from "./CodeBlock"
 import CodeSnippet from "./CodeSnippet"
+import DocsSection from "./DocsSection"
 
 export {
   Navbar,
@@ -32,4 +33,5 @@ export {
   SideNavbar,
   CodeBlock,
   CodeSnippet,
+  DocsSection,
 }

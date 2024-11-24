@@ -20,7 +20,13 @@ import {
   HardhatWeb3,
   HardhatTruffle5,
 } from "./pages/Plugins"
-import { Docs, DocsLayout, GettingStarted } from "./pages/Docs"
+import {
+  Docs,
+  DocsLayout,
+  Overview,
+  QuickStart,
+  Installation,
+} from "./pages/Docs"
 import { Tutorial } from "./pages/Tutorial"
 import { useDispatch, useSelector } from "react-redux"
 import { toggleTheme } from "./redux/themeSlice"
@@ -102,10 +108,14 @@ const App = () => {
             />
           </Route>
 
-          {/* Docs Nested Routes */}
-          <Route path="/docs" element={<DocsLayout />}>
-            <Route index element={<GettingStarted />} />
-            <Route path="getting-started" element={<GettingStarted />} />
+          {/* Docs Page without Sidebar */}
+          <Route path="/docs" element={<Docs />}></Route>
+
+          {/* Docs Detail with Sidebar */}
+          <Route path="/hardhat-runner/docs" element={<DocsLayout />}>
+            <Route path="getting-started" element={<Overview />} />
+            <Route path="getting-started" element={<Installation />} />
+            <Route path="getting-started" element={<QuickStart />} />
           </Route>
         </Routes>
       </Router>
