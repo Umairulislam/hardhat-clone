@@ -1,18 +1,17 @@
-// DocsLayout.jsx
-import { Outlet } from "react-router-dom";
-import {SideNavbar} from "../../components";
+import { Outlet } from "react-router-dom"
+import SideNavbar from "../../components/SideNavbar"
 
 const DocsLayout = () => {
   return (
-    <div className="flex">
-      {/* Sidebar for documentation links */}
+    <div className="flex pt-32">
+      {/* Sidebar navigation for Plugins */}
       <SideNavbar />
-      {/* Nested documentation routes */}
-      <main className="flex-1 p-4">
+      {/* Nested routes will be rendered here */}
+      <main className="flex-1 p-4 lg:ml-72">
         <Outlet />
       </main>
     </div>
-  );
-};
+  )
+}
 
-export default DocsLayout;
+export default DocsLayout

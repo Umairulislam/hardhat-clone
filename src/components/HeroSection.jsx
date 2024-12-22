@@ -8,10 +8,11 @@ import {
   sheEyes,
 } from "../assets"
 import { useSelector } from "react-redux"
+import { Link } from "react-router-dom"
 
 const HeroSection = () => {
   const isDarkMode = useSelector((state) => state.theme.isDarkMode)
-  
+
   return (
     <main className="flex justify-center items-center gap-10 flex-wrap">
       <section className="max-w-xl">
@@ -21,7 +22,11 @@ const HeroSection = () => {
         <h2 className="text-4xl md:text-6xl lg:text-7xl font-bold mt-10">
           Ethereum development environment for professionals
         </h2>
-        <button className="btn btn-primary mt-10">Get Started</button>
+        <button className="btn btn-primary mt-10">
+          <Link to="/hardhat-runner/docs/getting-started/overview">
+            Get Started
+          </Link>
+        </button>
       </section>
       <section className="max-w-xl">
         <div className="relative w-92 animate-up-down">

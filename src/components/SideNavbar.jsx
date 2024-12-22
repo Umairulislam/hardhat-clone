@@ -9,17 +9,12 @@ const SideNavbar = () => {
   const sections = [
     {
       heading: "Hardhat Runner",
-      menus: [
-        "Overview",
-        "Installation",
-        "Quick start",
-        "Configuration",
-        "Guides",
-      ],
+      menus: ["Overview", "Installation", "Quick start"],
     },
     {
-      heading: "Setting up a project",
+      heading: "Guides",
       menus: [
+        "Setting up a project",
         "Compiling your contracts",
         "Testing contracts",
         "Deploying your contracts",
@@ -95,7 +90,7 @@ const SideNavbar = () => {
 
   return (
     <div
-      className={`fixed left-0 hidden lg:block w-80 h-screen overflow-y-auto px-4 ${
+      className={`fixed left-0 hidden lg:block w-80 h-[calc(100vh-140px)] overflow-y-auto px-4 ${
         isDarkMode ? "text-black" : "text-gray-300"
       }`}
     >
@@ -104,7 +99,11 @@ const SideNavbar = () => {
           // Check if any menu in the section is active based on location
           const isSectionActive = section.menus.some((menu) => {
             const linkPath =
-              section.heading === "Plugins" && menu === "Community plugins"
+              section.heading === "Hardhat Runner"
+                ? `/hardhat-runner/docs/getting-started#${menu
+                    .toLowerCase()
+                    .replace(/ /g, "-")}`
+                : section.heading === "Plugins" && menu === "Community plugins"
                 ? "/hardhat-runner/plugins#community-plugins"
                 : section.heading === "Plugins"
                 ? `/hardhat-runner/plugins/${menu
@@ -128,8 +127,12 @@ const SideNavbar = () => {
               <ul className="ml-5 text-sm font-light">
                 {section.menus.map((menu) => {
                   const linkPath =
-                    section.heading === "Plugins" &&
-                    menu === "Community plugins"
+                    section.heading === "Hardhat Runner"
+                      ? `/hardhat-runner/docs/getting-started/${menu
+                          .toLowerCase()
+                          .replace(/ /g, "-")}`
+                      : section.heading === "Plugins" &&
+                        menu === "Community plugins"
                       ? "/hardhat-runner/plugins#community-plugins"
                       : section.heading === "Plugins"
                       ? `/hardhat-runner/plugins/${menu
