@@ -90,7 +90,7 @@ module.exports = {};`
         hardhat.config.js:
       </p>
       <CodeSnippet
-        code={snippet3}
+        code={snippet4}
         language="javascript"
         showLineNumbers={true}
         isCopyable={true}

@@ -113,9 +113,9 @@ const App = () => {
 
           {/* Docs Detail with Sidebar */}
           <Route path="/hardhat-runner/docs" element={<DocsLayout />}>
-            <Route path="getting-started" element={<Overview />} />
-            <Route path="getting-started" element={<Installation />} />
-            <Route path="getting-started" element={<QuickStart />} />
+            <Route path="getting-started/overview" element={<Overview />} />
+            <Route path="getting-started/installation" element={<Installation />} />
+            <Route path="getting-started/quick-start" element={<QuickStart />} />
           </Route>
         </Routes>
       </Router>

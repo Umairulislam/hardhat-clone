@@ -22,7 +22,11 @@ const CommunitySection = () => {
             answers to your problems and contribute to the plugin ecosystem.
           </p>
         </div>
-        <button className="btn btn-secondary">Join the Hardhat Discord</button>
+        <a href="https://discord.com/invite/TETZs2KK4k" target="_blank">
+          <button className="btn btn-secondary">
+            Join the Hardhat Discord
+          </button>
+        </a>
       </section>
     </main>
   )

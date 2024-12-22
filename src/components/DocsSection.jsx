@@ -66,12 +66,12 @@ const DocsSection = () => {
         <p>To get started check out these sections:</p>
         <ul className="list-disc ml-4 space-y-2">
           <li className="text-tertiary ">
-            <Link to="/hardhat-runner/docs/getting-started#overview">
+            <Link to="/hardhat-runner/docs/getting-started/overview">
               Getting Overview
             </Link>
           </li>
           <li className="text-tertiary ">
-            <Link to="/hardhat-runner/docs/getting-started#quick-start">
+            <Link to="/hardhat-runner/docs/getting-started/quick-start">
               Quick start guide
             </Link>
           </li>

@@ -9,7 +9,7 @@ const SideNavbar = () => {
   const sections = [
     {
       heading: "Hardhat Runner",
-      menus: ["Overview", "Installation", "Quick start", "Configuration"],
+      menus: ["Overview", "Installation", "Quick start"],
     },
     {
       heading: "Guides",
@@ -90,7 +90,7 @@ const SideNavbar = () => {
 
   return (
     <div
-      className={`fixed left-0 hidden lg:block w-80 h-screen overflow-y-auto px-4 ${
+      className={`fixed left-0 hidden lg:block w-80 h-[calc(100vh-140px)] overflow-y-auto px-4 ${
         isDarkMode ? "text-black" : "text-gray-300"
       }`}
     >
@@ -128,7 +128,7 @@ const SideNavbar = () => {
                 {section.menus.map((menu) => {
                   const linkPath =
                     section.heading === "Hardhat Runner"
-                      ? `/hardhat-runner/docs/getting-started#${menu
+                      ? `/hardhat-runner/docs/getting-started/${menu
                           .toLowerCase()
                           .replace(/ /g, "-")}`
                       : section.heading === "Plugins" &&

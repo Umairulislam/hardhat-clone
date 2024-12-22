@@ -10,6 +10,13 @@ import {
   MenuIcon,
   ClearIcon,
 } from "../assets"
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
+import {
+  faDiscord,
+  faGithub,
+  faXTwitter,
+} from "@fortawesome/free-brands-svg-icons"
+import { faCircleHalfStroke } from "@fortawesome/free-solid-svg-icons"
 
 const Navbar = ({ isDarkMode, toggleTheme }) => {
   const [isOpen, setIsOpen] = useState(false)
@@ -118,23 +125,27 @@ const Navbar = ({ isDarkMode, toggleTheme }) => {
               target="_blank"
               rel="noopener noreferrer"
             >
-              <GitHubIcon />
+              <FontAwesomeIcon icon={faGithub} />
             </a>
             <a
               href="https://twitter.com/HardhatHQ"
               target="_blank"
               rel="noopener noreferrer"
             >
-              <TwitterIcon />
+              <FontAwesomeIcon icon={faXTwitter} />
             </a>
-            <a href="" target="_blank" rel="noopener noreferrer">
-              <LinkedInIcon />
+            <a
+              href="https://discord.com/invite/TETZs2KK4k"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <FontAwesomeIcon icon={faDiscord} />
             </a>
           </div>
         </section>
-        <div className="hidden md:flex">
+        <div className="hidden lg:flex">
           <button onClick={toggleTheme}>
-            <ContrastIcon />
+            <FontAwesomeIcon icon={faCircleHalfStroke} size="lg" />
           </button>
         </div>
       </nav>
@@ -201,29 +212,33 @@ const Navbar = ({ isDarkMode, toggleTheme }) => {
               target="_blank"
               rel="noopener noreferrer"
             >
-              <GitHubIcon />
+              <FontAwesomeIcon icon={faGithub} />
             </a>
             <a
               href="https://twitter.com/HardhatHQ"
               target="_blank"
               rel="noopener noreferrer"
             >
-              <TwitterIcon />
+              <FontAwesomeIcon icon={faXTwitter} />
             </a>
-            <a href="" target="_blank" rel="noopener noreferrer">
-              <LinkedInIcon />
+            <a
+              href="https://discord.com/invite/TETZs2KK4k"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <FontAwesomeIcon icon={faDiscord} />
             </a>
           </div>
           <div>
             <button onClick={toggleTheme} className="mt-8">
-              <ContrastIcon />
+              <FontAwesomeIcon icon={faCircleHalfStroke} />
             </button>
           </div>
         </section>
       </nav>
 
       {/* Mobile Menu Icon */}
-      <section className="md:hidden absolute top-6 right-6">
+      <section className="lg:hidden fixed top-6 right-6 z-50">
         <button onClick={handleMenu} className="w-10 h-10 z-30 relative">
           {isOpen ? (
             <ClearIcon style={{ width: "32px", height: "32px" }} />

@@ -1,37 +1,17 @@
-import Navbar from "./Navbar"
-import HeroSection from "./HeroSection"
-import ToolSection from "./ToolSection"
-import WhyHardhat from "./WhyHardhat"
-import CommunitySection from "./CommunitySection"
-import LandingBanner from "./LandingBanner"
-import BrandSection from "./BrandSection"
-import FeatureSection from "./FeatureSection"
-import TestimonialSecton from "./TestimonialSecton"
-import NomicFoundation from "./NomicFoundation"
-import EthereumFoundation from "./EthereumFoundation"
-import Footer from "./Footer"
-import PluginsSection from "./PluginsSection"
-import SideNavbar from "./SideNavbar"
-import CodeBlock from "./CodeBlock"
-import CodeSnippet from "./CodeSnippet"
-import DocsSection from "./DocsSection"
-
-export {
-  Navbar,
-  HeroSection,
-  ToolSection,
-  WhyHardhat,
-  CommunitySection,
-  LandingBanner,
-  BrandSection,
-  FeatureSection,
-  TestimonialSecton,
-  NomicFoundation,
-  EthereumFoundation,
-  Footer,
-  PluginsSection,
-  SideNavbar,
-  CodeBlock,
-  CodeSnippet,
-  DocsSection,
-}
+export { default as Navbar } from "./Navbar";
+export { default as HeroSection } from "./HeroSection";
+export { default as ToolSection } from "./ToolSection";
+export { default as WhyHardhat } from "./WhyHardhat";
+export { default as CommunitySection } from "./CommunitySection";
+export { default as LandingBanner } from "./LandingBanner";
+export { default as BrandSection } from "./BrandSection";
+export { default as FeatureSection } from "./FeatureSection";
+export { default as TestimonialSecton } from "./TestimonialSecton";
+export { default as NomicFoundation } from "./NomicFoundation";
+export { default as EthereumFoundation } from "./EthereumFoundation";
+export { default as Footer } from "./Footer";
+export { default as PluginsSection } from "./PluginsSection";
+export { default as SideNavbar } from "./SideNavbar";
+export { default as CodeBlock } from "./CodeBlock";
+export { default as CodeSnippet } from "./CodeSnippet";
+export { default as DocsSection } from "./DocsSection";

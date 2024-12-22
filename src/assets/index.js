@@ -12,10 +12,10 @@ import sheHead from "./she-head.svg"
 import heHead from "./he-head.svg"
 import heEyes from "./he-eyes.svg"
 import sheEyes from "./she-eyes.svg"
-import compile from "./compile.png"
-import deploy from "./deploy.png"
-import debug from "./debug.png"
-import code from "./code.png"
+import runner from "./runner.svg"
+import ignition from "./ignition.svg"
+import network from "./network.svg"
+import vscode from "./vscode.svg"
 import extensibleDark from "./extensible-dark.svg"
 import extensibleLight from "./extensible-light.svg"
 import flexibilityDark from "./flexibility-dark.svg"
@@ -76,10 +76,10 @@ export {
   heHead,
   heEyes,
   sheEyes,
-  compile,
-  deploy,
-  debug,
-  code,
+  runner,
+  ignition,
+  network,
+  vscode,
   extensibleDark,
   extensibleLight,
   flexibilityDark,
