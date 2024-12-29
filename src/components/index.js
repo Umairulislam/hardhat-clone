@@ -15,3 +15,4 @@ export { default as SideNavbar } from "./SideNavbar";
 export { default as CodeBlock } from "./CodeBlock";
 export { default as CodeSnippet } from "./CodeSnippet";
 export { default as DocsSection } from "./DocsSection";
+export { default as TutorialSidebar } from "./TutorialSidebar";

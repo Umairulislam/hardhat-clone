@@ -27,7 +27,18 @@ import {
   QuickStart,
   Installation,
 } from "./pages/Docs"
-import { Tutorial } from "./pages/Tutorial"
+import {
+  Tutorial,
+  TutorialLayout,
+  SetupEnvironment,
+  CreateProject,
+  WriteCompileContracts,
+  TestContracts,
+  DebugHardhatNetwork,
+  DeployLiveNetwork,
+  BoilerplateProject,
+  FinalThoughts,
+} from "./pages/Tutorial"
 import { useDispatch, useSelector } from "react-redux"
 import { toggleTheme } from "./redux/themeSlice"
 
@@ -49,9 +60,8 @@ const App = () => {
         <Navbar isDarkMode={isDarkMode} toggleTheme={handleToggleTheme} />
         <Routes>
           <Route path="/" element={<Home />} />
-          <Route path="/tutorial" element={<Tutorial />} />
 
-          {/* Plugins Page Page without Sidebar */}
+          {/* Plugins Page without Sidebar */}
           <Route path="/hardhat-runner/plugins" element={<Plugins />} />
 
           {/* Plugins Detail with Sidebar */}
@@ -114,8 +124,45 @@ const App = () => {
           {/* Docs Detail with Sidebar */}
           <Route path="/hardhat-runner/docs" element={<DocsLayout />}>
             <Route path="getting-started/overview" element={<Overview />} />
-            <Route path="getting-started/installation" element={<Installation />} />
-            <Route path="getting-started/quick-start" element={<QuickStart />} />
+            <Route
+              path="getting-started/installation"
+              element={<Installation />}
+            />
+            <Route
+              path="getting-started/quick-start"
+              element={<QuickStart />}
+            />
+          </Route>
+
+          {/* Tutorial Page with Sidebar */}
+          <Route path="/tutorial" element={<TutorialLayout />}>
+            <Route path="" element={<Tutorial />} />
+            <Route
+              path="setting-up-the-environment"
+              element={<SetupEnvironment />}
+            />
+            <Route
+              path="creating-a-new-hardhat-project"
+              element={<CreateProject />}
+            />
+            <Route
+              path="writing-and-compiling-contracts"
+              element={<WriteCompileContracts />}
+            />
+            <Route path="testing-contracts" element={<TestContracts />} />
+            <Route
+              path="debugging-with-hardhat-network"
+              element={<DebugHardhatNetwork />}
+            />
+            <Route
+              path="deploying-to-a-live-network"
+              element={<DeployLiveNetwork />}
+            />
+            <Route
+              path="boilerplate-project"
+              element={<BoilerplateProject />}
+            />
+            <Route path="final-thoughts" element={<FinalThoughts />} />
           </Route>
         </Routes>
       </Router>
