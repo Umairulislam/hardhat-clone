@@ -1,22 +1,17 @@
 import React, { useState, useEffect } from "react"
 import { NavLink, Link } from "react-router-dom"
-import {
-  logolight,
-  logoDark,
-  GitHubIcon,
-  TwitterIcon,
-  ContrastIcon,
-  LinkedInIcon,
-  MenuIcon,
-  ClearIcon,
-} from "../assets"
+import { logolight, logoDark } from "../assets"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import {
   faDiscord,
   faGithub,
   faXTwitter,
 } from "@fortawesome/free-brands-svg-icons"
-import { faCircleHalfStroke } from "@fortawesome/free-solid-svg-icons"
+import {
+  faCircleHalfStroke,
+  faBars,
+  faTimes,
+} from "@fortawesome/free-solid-svg-icons"
 
 const Navbar = ({ isDarkMode, toggleTheme }) => {
   const [isOpen, setIsOpen] = useState(false)
@@ -241,9 +236,9 @@ const Navbar = ({ isDarkMode, toggleTheme }) => {
       <section className="lg:hidden fixed top-6 right-6 z-50">
         <button onClick={handleMenu} className="w-10 h-10 z-30 relative">
           {isOpen ? (
-            <ClearIcon style={{ width: "32px", height: "32px" }} />
+            <FontAwesomeIcon icon={faTimes} size="xl" />
           ) : (
-            <MenuIcon style={{ width: "32px", height: "32px" }} />
+            <FontAwesomeIcon icon={faBars} size="xl" />
           )}
         </button>
       </section>
