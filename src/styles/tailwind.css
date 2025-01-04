@@ -40,7 +40,7 @@ html {
   }
 
   .plugin-heading {
-    @apply font-bold text-lg mt-4;
+    @apply font-bold text-lg mt-4 tracking-wide;
   }
 }
 
