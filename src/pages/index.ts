@@ -1,0 +1,5 @@
+export { default as Home } from "./home/Home"
+export { default as HomeLayout } from "./home/HomeLayout"
+export { default as Documentation } from "./docs/Documentation"
+export { default as Tutorial } from "./tutorial/Tutorial"
+export { default as Plugins } from "./plugins/Plugins"
