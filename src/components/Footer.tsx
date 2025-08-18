@@ -6,7 +6,7 @@ const Footer = () => {
   const { theme } = useContext(ThemeContext)
   const date = new Date().getFullYear()
   return (
-    <footer className={`mt-20 py-12 bg-dark-bg text-white dark:bg-light-bg dark:text-black`}>
+    <footer className="mt-20 py-12 bg-bg-dark text-white dark:bg-bg-light dark:text-black">
       <div className="flex flex-col text-center justify-center items-center gap-20 flex-wrap">
         <div className="flex items-center justify-center gap-4 flex-wrap">
           <h1 className="text-xl font-light">Suppported by</h1>

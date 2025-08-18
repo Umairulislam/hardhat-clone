@@ -12,7 +12,7 @@ import {
 
 const home = () => {
   return (
-    <main className="pt-40 ">
+    <main className="pt-40">
       <section className="container mx-auto section_padding">
         <Hero />
         <Tools />

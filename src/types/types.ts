@@ -37,3 +37,24 @@ export type Testimonials = {
   companyLogo: string
   message: string
 }
+
+export type OfficialPlugins = {
+  id: number
+  name: string
+  description: string
+  tags: string[]
+  foundation: string
+}
+
+export type CommunityPlugins = {
+  id: number
+  name: string
+  description: string
+  tags: string[]
+  foundation: string
+}
+
+export type Plugins = {
+  title: string
+  component: React.ComponentType
+}

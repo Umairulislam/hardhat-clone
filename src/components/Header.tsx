@@ -16,7 +16,7 @@ import { ThemeContext } from "../context/ThemeContext"
 const navItems = [
   { label: "Home", to: "/", exact: true },
   { label: "Tools", to: "/#tools" },
-  { label: "Plugins", to: "/plugins" },
+  { label: "Plugins", to: "/hardhat-runner/plugins" },
   { label: "Documentation", to: "/docs" },
   { label: "Tutorial", to: "/tutorial" },
 ]
@@ -85,24 +85,27 @@ const documentationSubmenu = [
   {
     heading: "Plugins",
     menus: [
-      { label: "@nomicfoundation/hardhat-toolbox", to: "/docs/plugins/hardhat-toolbox" },
-      { label: "@nomicfoundation/hardhat-toolbox-viem", to: "/docs/plugins/hardhat-toolbox-viem" },
+      { label: "@nomicfoundation/hardhat-toolbox", to: "/hardhat-runner/plugins/hardhat-toolbox" },
+      {
+        label: "@nomicfoundation/hardhat-toolbox-viem",
+        to: "/hardhat-runner/plugins/hardhat-toolbox-viem",
+      },
       {
         label: "@nomicfoundation/hardhat-chai-matchers",
-        to: "/docs/plugins/hardhat-chai-matchers",
+        to: "/hardhat-runner/plugins/hardhat-chai-matchers",
       },
-      { label: "@nomicfoundation/hardhat-ethers", to: "/docs/plugins/hardhat-ethers" },
-      { label: "@nomicfoundation/hardhat-viem", to: "/docs/plugins/hardhat-viem" },
-      { label: "@nomicfoundation/hardhat-verify", to: "/docs/plugins/hardhat-verify" },
-      { label: "@nomicfoundation/hardhat-foundry", to: "/docs/plugins/hardhat-foundry" },
-      { label: "@nomicfoundation/hardhat-ledger", to: "/docs/plugins/hardhat-ledger" },
-      { label: "@nomicfoundation/hardhat-web3-v4", to: "/docs/plugins/hardhat-web3-v4" },
-      { label: "@nomiclabs/hardhat-vyper", to: "/docs/plugins/hardhat-vyper" },
-      { label: "@nomiclabs/hardhat-solhint", to: "/docs/plugins/hardhat-solhint" },
-      { label: "@nomiclabs/hardhat-waffle", to: "/docs/plugins/hardhat-waffle" },
-      { label: "@nomiclabs/hardhat-web3", to: "/docs/plugins/hardhat-web3" },
-      { label: "@nomiclabs/hardhat-truffle5", to: "/docs/plugins/hardhat-truffle5" },
-      { label: "Community plugins", to: "/docs/plugins/community" },
+      { label: "@nomicfoundation/hardhat-ethers", to: "/hardhat-runner/plugins/hardhat-ethers" },
+      { label: "@nomicfoundation/hardhat-viem", to: "/hardhat-runner/plugins/hardhat-viem" },
+      { label: "@nomicfoundation/hardhat-verify", to: "/hardhat-runner/plugins/hardhat-verify" },
+      { label: "@nomicfoundation/hardhat-foundry", to: "/hardhat-runner/plugins/hardhat-foundry" },
+      { label: "@nomicfoundation/hardhat-ledger", to: "/hardhat-runner/plugins/hardhat-ledger" },
+      { label: "@nomicfoundation/hardhat-web3-v4", to: "/hardhat-runner/plugins/hardhat-web3-v4" },
+      { label: "@nomiclabs/hardhat-vyper", to: "/hardhat-runner/plugins/hardhat-vyper" },
+      { label: "@nomiclabs/hardhat-solhint", to: "/hardhat-runner/plugins/hardhat-solhint" },
+      { label: "@nomiclabs/hardhat-waffle", to: "/hardhat-runner/plugins/hardhat-waffle" },
+      { label: "@nomiclabs/hardhat-web3", to: "/hardhat-runner/plugins/hardhat-web3" },
+      { label: "@nomiclabs/hardhat-truffle5", to: "/hardhat-runner/plugins/hardhat-truffle5" },
+      { label: "Community plugins", to: "/hardhat-runner/plugins/community" },
     ],
   },
 ]
@@ -208,7 +211,7 @@ const Header = () => {
           </li>
         ))}
       </ul>
-      <div className="border-t border-slate-700 pt-4 mt-4">{renderSocialIcons()}</div>
+      <div className="border-t border-border pt-4 mt-4">{renderSocialIcons()}</div>
     </div>
   )
 
@@ -230,7 +233,7 @@ const Header = () => {
           </div>
         ))}
       </ul>
-      <div className="border-t border-slate-700 pt-4 mt-4">{renderSocialIcons()}</div>
+      <div className="border-t border-border pt-4 mt-4">{renderSocialIcons()}</div>
     </div>
   )
 
@@ -245,14 +248,14 @@ const Header = () => {
           </li>
         ))}
       </ul>
-      <div className="border-t border-slate-700 pt-4 mt-4">{renderSocialIcons()}</div>
+      <div className="border-t border-border pt-4 mt-4">{renderSocialIcons()}</div>
     </div>
   )
 
   return (
     <header
       className={`section_padding fixed top-0 left-0 right-0 z-50 bg-transparent ${
-        scrolled ? "bg-white dark:bg-[#181a1f]" : ""
+        scrolled ? "bg-white dark:bg-bg-dark" : ""
       }`}
     >
       {/* Desktop Navbar */}
@@ -286,7 +289,7 @@ const Header = () => {
       </nav>
       {/* Mobile Menu */}
       {isOpen && (
-        <nav className="lg:hidden fixed left-0 top-16 z-50 flex flex-col gap-5 border-r border-slate-700 h-full w-80 p-8 bg-white dark:bg-[#181a1f]">
+        <nav className="lg:hidden fixed left-0 top-16 z-50 flex flex-col gap-5 border-r border-border h-full w-80 p-8 bg-white dark:bg-bg-dark">
           {/* Back button for submenus */}
           {menuScreen !== "main" && (
             <button className="flex items-center gap-2" onClick={() => setMenuScreen("main")}>
@@ -299,7 +302,7 @@ const Header = () => {
           {menuScreen === "documentation" && renderDocumentationSubmenu()}
           {menuScreen === "tutorial" && renderTutorialSubmenu()}
           {/* Social icons and dark mode at bottom */}
-          <div className="flex justify-between items-center border-t border-slate-700 pt-4">
+          <div className="flex justify-between items-center border-t border-border pt-4">
             {renderSocialIcons()}
             <button
               className="text-2xl cursor-pointer"

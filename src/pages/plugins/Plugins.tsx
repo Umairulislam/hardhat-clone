@@ -1,8 +1,13 @@
+import { CommunityPlugins, OfficialPlugins } from "../../components"
+
 const Plugins = () => {
   return (
-    <div>
-      <h1>Plugins</h1>
-    </div>
+    <main>
+      <section className="max-w-4xl mx-auto">
+        <OfficialPlugins />
+        <CommunityPlugins />
+      </section>
+    </main>
   )
 }
 
