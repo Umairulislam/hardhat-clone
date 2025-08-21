@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react"
-import { useLocation } from "react-router"
+import { Link, useLocation } from "react-router"
 import { tools } from "../data"
 
 const ToolSection = () => {
@@ -72,9 +72,12 @@ const ToolSection = () => {
           </h2>
         </div>
         <p className="mt-4 text-muted w-56 md:w-full">{activeTool.description}</p>
-        <a href="#" className="mt-4 inline-block hover:underline text-muted">
+        <Link
+          to={"/hardhat-runner/docs/getting-started#overview"}
+          className="mt-4 inline-block hover:underline text-muted"
+        >
           Learn more →
-        </a>
+        </Link>
 
         <span className="absolute right-0 bottom-0 w-10 border-t-1 pl-5 border-border"></span>
       </div>

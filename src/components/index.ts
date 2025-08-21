@@ -15,6 +15,7 @@ export { default as ScrollToTop } from "./ScrollToTop"
 export { default as Docs } from "./Docs"
 export { default as ScrollToHash } from "./ScrollToHash"
 export { default as TutorialSidebar } from "./TutorialSidebar"
+export { default as SidebarActions } from "./SidebarActions"
 
 // PLugins
 export { default as PluginToolbox } from "../pages/plugins/PluginToolbox"

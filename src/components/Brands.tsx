@@ -14,7 +14,7 @@ const Brands = () => {
           </div>
         </Marquee>
         <Marquee speed={80} pauseOnHover direction="right">
-          <div className="flex items-center gap-12 px-6 pt-6">
+          <div className="flex items-center gap-12 px-6 pt-8">
             {brands.slice(12, 24).map((brand) => (
               <img src={brand.icon} alt={brand.name} key={brand.icon} />
             ))}

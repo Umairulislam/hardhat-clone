@@ -8,7 +8,7 @@ const PluginTruffle4 = () => {
 
   return (
     <section className="flex flex-col gap-6 justify-center">
-      <h1 className="tertiary_heading">hardhat-web3-legacy</h1>
+      <h1 className="tertiary_heading">hardhat-truffle4</h1>
       <p>
         <u>Hardhat</u> plugin for integration with TruffleContract from Truffle 4
       </p>

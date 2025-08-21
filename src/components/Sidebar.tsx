@@ -1,4 +1,4 @@
-import { NavLink } from "react-router"
+import { NavLink, useLocation } from "react-router"
 
 const documentationSubmenu = [
   {
@@ -119,6 +119,7 @@ const documentationSubmenu = [
 ]
 
 const Sidebar = () => {
+  const { hash, pathname } = useLocation()
   return (
     <section className="hidden lg:block fixed left-0 top top-24 border-r border-border h-[calc(100vh-100px)] w-sm p-10 bg-white dark:bg-bg-dark overflow-y-auto">
       <ul className="flex flex-col gap-4 text-black dark:text-gray">
@@ -126,21 +127,24 @@ const Sidebar = () => {
           <div key={i}>
             <h3 className="font-bold mb-2">{section.heading}</h3>
             <ul className="flex flex-col pl-5 gap-1.5 text-sm">
-              {section.menus.map((menu, j) => (
-                <li key={j}>
-                  <NavLink
-                    to={menu.to}
-                    end
-                    className={({ isActive }) =>
-                      isActive
-                        ? "text-link-dark dark:text-link-light"
-                        : "hover:text-link-dark dark:hover:text-link-light"
-                    }
-                  >
-                    {menu.label}
-                  </NavLink>
-                </li>
-              ))}
+              {section.menus.map((menu, j) => {
+                const isActive = pathname + hash === menu.to
+                return (
+                  <li key={j}>
+                    <NavLink
+                      to={menu.to}
+                      end
+                      className={() =>
+                        isActive
+                          ? "text-link-dark dark:text-link-light"
+                          : "hover:text-link-dark dark:hover:text-link-light"
+                      }
+                    >
+                      {menu.label}
+                    </NavLink>
+                  </li>
+                )
+              })}
             </ul>
           </div>
         ))}

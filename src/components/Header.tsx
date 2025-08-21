@@ -8,9 +8,10 @@ import {
   FaBarsStaggered,
   IoMdClose,
 } from "../assets"
-import { NavLink } from "react-router"
+import { NavLink, useLocation } from "react-router"
 import { logoLight, logoDark } from "../assets"
 import { ThemeContext } from "../context/ThemeContext"
+import SidebarActions from "./SidebarActions"
 
 // Main navigation items
 const navItems = [
@@ -41,9 +42,9 @@ const documentationSubmenu = [
   {
     heading: "Hardhat Runner",
     menus: [
-      { label: "Overview", to: "/docs/hardhat-runner/overview" },
-      { label: "Installation", to: "/docs/hardhat-runner/installation" },
-      { label: "Quick start", to: "/docs/hardhat-runner/quick-start" },
+      { label: "Overview", to: "/hardhat-runner/docs/getting-started#overview" },
+      { label: "Installation", to: "/hardhat-runner/docs/getting-started#installation" },
+      { label: "Quick start", to: "/hardhat-runner/docs/getting-started#quick-start" },
     ],
   },
   {
@@ -85,41 +86,86 @@ const documentationSubmenu = [
   {
     heading: "Plugins",
     menus: [
-      { label: "@nomicfoundation/hardhat-toolbox", to: "/hardhat-runner/plugins/hardhat-toolbox" },
+      {
+        label: "@nomicfoundation/hardhat-toolbox",
+        to: "/hardhat-runner/plugins/nomicfoundation-hardhat-toolbox",
+      },
       {
         label: "@nomicfoundation/hardhat-toolbox-viem",
-        to: "/hardhat-runner/plugins/hardhat-toolbox-viem",
+        to: "/hardhat-runner/plugins/nomicfoundation-hardhat-toolbox-viem",
       },
       {
         label: "@nomicfoundation/hardhat-chai-matchers",
-        to: "/hardhat-runner/plugins/hardhat-chai-matchers",
+        to: "/hardhat-runner/plugins/nomicfoundation-hardhat-chai-matchers",
       },
-      { label: "@nomicfoundation/hardhat-ethers", to: "/hardhat-runner/plugins/hardhat-ethers" },
-      { label: "@nomicfoundation/hardhat-viem", to: "/hardhat-runner/plugins/hardhat-viem" },
-      { label: "@nomicfoundation/hardhat-verify", to: "/hardhat-runner/plugins/hardhat-verify" },
-      { label: "@nomicfoundation/hardhat-foundry", to: "/hardhat-runner/plugins/hardhat-foundry" },
-      { label: "@nomicfoundation/hardhat-ledger", to: "/hardhat-runner/plugins/hardhat-ledger" },
-      { label: "@nomicfoundation/hardhat-web3-v4", to: "/hardhat-runner/plugins/hardhat-web3-v4" },
-      { label: "@nomiclabs/hardhat-vyper", to: "/hardhat-runner/plugins/hardhat-vyper" },
-      { label: "@nomiclabs/hardhat-solhint", to: "/hardhat-runner/plugins/hardhat-solhint" },
-      { label: "@nomiclabs/hardhat-waffle", to: "/hardhat-runner/plugins/hardhat-waffle" },
-      { label: "@nomiclabs/hardhat-web3", to: "/hardhat-runner/plugins/hardhat-web3" },
-      { label: "@nomiclabs/hardhat-truffle5", to: "/hardhat-runner/plugins/hardhat-truffle5" },
-      { label: "Community plugins", to: "/hardhat-runner/plugins/community" },
+      {
+        label: "@nomicfoundation/hardhat-ethers",
+        to: "/hardhat-runner/plugins/nomicfoundation-hardhat-ethers",
+      },
+      {
+        label: "@nomicfoundation/hardhat-viem",
+        to: "/hardhat-runner/plugins/nomicfoundation-hardhat-viem",
+      },
+      {
+        label: "@nomicfoundation/hardhat-verify",
+        to: "/hardhat-runner/plugins/nomicfoundation-hardhat-verify",
+      },
+      {
+        label: "@nomicfoundation/hardhat-foundry",
+        to: "/hardhat-runner/plugins/nomicfoundation-hardhat-foundry",
+      },
+      {
+        label: "@nomicfoundation/hardhat-ledger",
+        to: "/hardhat-runner/plugins/nomicfoundation-hardhat-ledger",
+      },
+      {
+        label: "@nomicfoundation/hardhat-web3-v4",
+        to: "/hardhat-runner/plugins/nomicfoundation-hardhat-web3-v4",
+      },
+      {
+        label: "@nomiclabs/hardhat-vyper",
+        to: "/hardhat-runner/plugins/nomiclabs-hardhat-vyper",
+      },
+      {
+        label: "@nomiclabs/hardhat-solhint",
+        to: "/hardhat-runner/plugins/nomiclabs-hardhat-solhint",
+      },
+      {
+        label: "@nomiclabs/hardhat-solpp",
+        to: "/hardhat-runner/plugins/nomiclabs-hardhat-solpp",
+      },
+
+      {
+        label: "@nomiclabs/hardhat-web3",
+        to: "/hardhat-runner/plugins/nomiclabs-hardhat-web3",
+      },
+      {
+        label: "@nomiclabs/hardhat-truffle5",
+        to: "/hardhat-runner/plugins/nomiclabs-hardhat-truffle5",
+      },
+      {
+        label: "@nomiclabs/hardhat-web3-legacy",
+        to: "/hardhat-runner/plugins/nomiclabs-hardhat-web3-legacy",
+      },
+      {
+        label: "@nomiclabs/hardhat-truffle4",
+        to: "/hardhat-runner/plugins/nomiclabs-hardhat-truffle4",
+      },
+      { label: "Community plugins", to: "/hardhat-runner/plugins#community-plugins" },
     ],
   },
 ]
 
 // Tutorial submenu items
 const tutorialSubMenu = [
-  { label: "Overview", to: "/tutorial/overview" },
-  { label: "Setting up the environment", to: "/tutorial/setting-up" },
-  { label: "Creating a new Hardhat project", to: "/tutorial/new-project" },
-  { label: "Writing and compiling contracts", to: "/tutorial/writing-compiling" },
-  { label: "Testing contracts", to: "/tutorial/testing" },
-  { label: "Debugging with Hardhat Network", to: "/tutorial/debugging" },
-  { label: "Deploying to a live network", to: "/tutorial/deploying" },
-  { label: "Boilerplate Project", to: "/tutorial/boilerplate" },
+  { label: "Overview", to: "/tutorial" },
+  { label: "Setting up the environment", to: "/tutorial/setting-up-the-environment" },
+  { label: "Creating a new Hardhat project", to: "/tutorial/creating-a-new-hardhat-project" },
+  { label: "Writing and compiling contracts", to: "/tutorial/writing-and-compiling-contracts" },
+  { label: "Testing contracts", to: "/tutorial/testing-contracts" },
+  { label: "Debugging with Hardhat Network", to: "/tutorial/debugging-with-hardhat-network" },
+  { label: "Deploying to a live network", to: "/tutorial/deploying-to-a-live-network" },
+  { label: "Boilerplate Project", to: "/tutorial/boilerplate-project" },
   { label: "Final Thoughts", to: "/tutorial/final-thoughts" },
 ]
 
@@ -134,6 +180,8 @@ const Header = () => {
   const [menuScreen, setMenuScreen] = useState<"main" | "tools" | "documentation" | "tutorial">(
     "main"
   )
+  // Get current pathname and hash
+  const { hash, pathname } = useLocation()
 
   const toggleMenu = () => setIsOpen((prev) => !prev)
   const handleScroll = () => {
@@ -204,51 +252,75 @@ const Header = () => {
   const renderToolsSubmenu = () => (
     <div className="flex flex-col h-full">
       <h2 className="text-xl font-bold mb-4">Tools</h2>
-      <ul className="flex-1 flex flex-col gap-4 overflow-y-auto text-[#ccc]">
+      <ul className="flex-1 flex flex-col gap-2 overflow-y-auto text-black dark:text-gray">
         {toolsSubMenu.map((item, index) => (
           <li key={index}>
             <NavLink to={item.to}>{item.label}</NavLink>
           </li>
         ))}
       </ul>
-      <div className="border-t border-border pt-4 mt-4">{renderSocialIcons()}</div>
+      <SidebarActions renderSocialIcons={renderSocialIcons} toggleTheme={toggleTheme} />
     </div>
   )
 
-  // Render Documentation submenu with headings and menus
+  // Render Documentation submenu with headings
   const renderDocumentationSubmenu = () => (
-    <div className="flex flex-col h-full pb-32">
+    <div className="flex flex-col h-full overflow-y-auto">
       <h2 className="text-xl font-bold mb-4">Documentation</h2>
-      <ul className="flex-1 flex flex-col gap-4 overflow-y-auto text-[#ccc]">
+      <ul className="flex-1 flex flex-col gap-4 text-black dark:text-gray">
         {documentationSubmenu.map((section, i) => (
           <div key={i}>
             <h3 className="font-semibold mb-2">{section.heading}</h3>
-            <ul className="space-y-2 pl-4">
-              {section.menus.map((menu, j) => (
-                <li key={j}>
-                  <NavLink to={menu.to}>{menu.label}</NavLink>
-                </li>
-              ))}
+            <ul className="flex flex-col gap-2 pl-4">
+              {section.menus.map((menu, j) => {
+                const isActive = pathname + hash === menu.to
+                return (
+                  <li key={j}>
+                    <NavLink
+                      to={menu.to}
+                      className={
+                        isActive
+                          ? "text-link-dark dark:text-link-light"
+                          : "hover:text-link-dark dark:hover:text-link-light"
+                      }
+                    >
+                      {menu.label}
+                    </NavLink>
+                  </li>
+                )
+              })}
             </ul>
           </div>
         ))}
       </ul>
-      <div className="border-t border-border pt-4 mt-4">{renderSocialIcons()}</div>
+      <SidebarActions renderSocialIcons={renderSocialIcons} toggleTheme={toggleTheme} />
     </div>
   )
 
   // Render Tutorial submenu
   const renderTutorialSubmenu = () => (
-    <div className="flex flex-col h-full pb-32">
+    <div className="flex flex-col h-full overflow-y-auto">
       <h2 className="text-xl font-bold mb-4">Tutorial</h2>
-      <ul className="flex-1 flex flex-col gap-4 overflow-y-auto list-decimal pl-10 text-[#ccc]">
-        {tutorialSubMenu.map((item, index) => (
-          <li key={index}>
-            <NavLink to={item.to}>{item.label}</NavLink>
-          </li>
-        ))}
+      <ul className="flex-1 flex flex-col gap-2 list-decimal list-inside pl-4 text-black dark:text-gray">
+        {tutorialSubMenu.map((item, index) => {
+          const isActive = pathname + hash === item.to
+          return (
+            <li key={index}>
+              <NavLink
+                to={item.to}
+                className={
+                  isActive
+                    ? "text-link-dark dark:text-link-light"
+                    : "hover:text-link-dark dark:hover:text-link-light"
+                }
+              >
+                {item.label}
+              </NavLink>
+            </li>
+          )
+        })}
       </ul>
-      <div className="border-t border-border pt-4 mt-4">{renderSocialIcons()}</div>
+      <SidebarActions renderSocialIcons={renderSocialIcons} toggleTheme={toggleTheme} />
     </div>
   )
 
@@ -289,7 +361,7 @@ const Header = () => {
       </nav>
       {/* Mobile Menu */}
       {isOpen && (
-        <nav className="lg:hidden fixed left-0 top-16 z-50 flex flex-col gap-5 border-r border-border h-full w-80 p-8 bg-white dark:bg-bg-dark">
+        <nav className="lg:hidden fixed left-0 top-16 z-50 flex flex-col gap-5 border-r border-border h-full w-80 p-5 bg-white dark:bg-bg-dark">
           {/* Back button for submenus */}
           {menuScreen !== "main" && (
             <button className="flex items-center gap-2" onClick={() => setMenuScreen("main")}>
@@ -302,16 +374,7 @@ const Header = () => {
           {menuScreen === "documentation" && renderDocumentationSubmenu()}
           {menuScreen === "tutorial" && renderTutorialSubmenu()}
           {/* Social icons and dark mode at bottom */}
-          <div className="flex justify-between items-center border-t border-border pt-4">
-            {renderSocialIcons()}
-            <button
-              className="text-2xl cursor-pointer"
-              onClick={toggleTheme}
-              aria-label="Toggle dark mode"
-            >
-              <CgDarkMode />
-            </button>
-          </div>
+          <SidebarActions renderSocialIcons={renderSocialIcons} toggleTheme={toggleTheme} />
         </nav>
       )}
     </header>

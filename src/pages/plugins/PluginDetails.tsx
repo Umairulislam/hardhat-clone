@@ -11,6 +11,19 @@ const PluginDetails = () => {
 
   const plugin = plugins[pluginId]
 
+  if (!plugin) {
+    return (
+      <main>
+        <section>
+          <Sidebar />
+        </section>
+        <section className="mx-auto lg:ml-[24rem] p-4 md:py-6 md:px-12 lg:py-12 lg:px-32 text-black dark:text-gray">
+          <p>No details available for this plugin.</p>
+        </section>
+      </main>
+    )
+  }
+
   return (
     <main>
       <section>
