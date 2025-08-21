@@ -1,7 +1,12 @@
-export { default as Home } from "./home/Home"
+export { default as HomePage } from "./home/HomePage"
 export { default as HomeLayout } from "./home/HomeLayout"
-export { default as Plugins } from "./plugins/Plugins"
+
+export { default as PluginsPage } from "./plugins/PluginsPage"
 export { default as PluginsLayout } from "./plugins/PluginsLayout"
 export { default as PluginDetails } from "./plugins/PluginDetails"
-export { default as Documentation } from "./docs/Documentation"
+
+export { default as DocsPage } from "./docs/DocsPage"
+export { default as DocsLayout } from "./docs/DocsLayout"
+export { default as DocDetails } from "./docs/DocDetails"
+
 export { default as Tutorial } from "./tutorial/Tutorial"

@@ -54,25 +54,28 @@ import {
   avatar3,
   avatar4,
 } from "../assets"
-import PluginChaiMatchers from "../components/PluginChaiMatchers"
-import PluginEthers from "../components/PluginEthers"
-import PluginFoundry from "../components/PluginFoundry"
-import PluginLedger from "../components/PluginLedger"
-import PluginSolhint from "../components/PluginSolhint"
-import PluginSolpp from "../components/PluginSolpp"
-import PluginToolbox from "../components/PluginToolbox"
-import PluginToolboxViem from "../components/PluginToolboxViem"
-import PluginTruffle4 from "../components/PluginTruffle4"
-import PluginTruffle5 from "../components/PluginTruffle5"
-import PluginVerify from "../components/PluginVerify"
-import PluginViem from "../components/PluginViem"
-import PluginVyper from "../components/PluginVyper"
-import PluginWeb3 from "../components/PluginWeb3"
-import PluginWeb3Legacy from "../components/PluginWeb3Legacy"
-import PluginWeb3V4 from "../components/PluginWeb3V4"
+
+import PluginChaiMatchers from "../pages/plugins/PluginChaiMatchers"
+import PluginEthers from "../pages/plugins/PluginEthers"
+import PluginFoundry from "../pages/plugins/PluginFoundry"
+import PluginLedger from "../pages/plugins/PluginLedger"
+import PluginSolhint from "../pages/plugins/PluginSolhint"
+import PluginSolpp from "../pages/plugins/PluginSolpp"
+import PluginToolbox from "../pages/plugins/PluginToolbox"
+import PluginToolboxViem from "../pages/plugins/PluginToolboxViem"
+import PluginTruffle4 from "../pages/plugins/PluginTruffle4"
+import PluginTruffle5 from "../pages/plugins/PluginTruffle5"
+import PluginVerify from "../pages/plugins/PluginVerify"
+import PluginViem from "../pages/plugins/PluginViem"
+import PluginVyper from "../pages/plugins/PluginVyper"
+import PluginWeb3 from "../pages/plugins/PluginWeb3"
+import PluginWeb3Legacy from "../pages/plugins/PluginWeb3Legacy"
+import PluginWeb3V4 from "../pages/plugins/PluginWeb3V4"
+
 import type {
   Brands,
   CommunityPlugins,
+  Docs,
   Features,
   OfficialPlugins,
   Plugins,
@@ -790,3 +793,42 @@ export const plugins: Record<string, Plugins> = {
     component: PluginTruffle4,
   },
 }
+
+export const docs: Docs[] = [
+  {
+    title: "Hardhat Runner",
+    description:
+      "Hardhat Runner is the main component you interact with when using Hardhat. It's a flexible and extensible task runner that helps you manage and automate the recurring tasks inherent to developing smart contracts and dApps.",
+    link: "Learn more",
+  },
+  {
+    title: "Hardhat Network",
+    description:
+      "Hardhat comes built-in with Hardhat Network, a local Ethereum network node designed for development. It allows you to deploy your contracts, run your tests, and debug your code, all within the confines of your local machine.",
+    link: "Learn more",
+  },
+  {
+    title: "Hardhat Ignition",
+    description:
+      "Hardhat Ignition is a declarative deployment system that enables you to deploy your smart contracts without navigating the mechanics of the deployment process.",
+    link: "Learn more",
+  },
+  {
+    title: "Hardhat for Visual Studio Code",
+    description:
+      "Hardhat for Visual Studio Code is a VS Code extension that adds language support for Solidity and provides editor integration for Hardhat projects.",
+    link: "Learn more",
+  },
+  {
+    title: "Hardhat Chai Matchers",
+    description:
+      "Hardhat Chai Matchers adds Ethereum-specific capabilities to the Chai assertion library, making your smart contract tests easy to write and read. Among other things, you can assert that a contract fired certain events, exhibited a specific revert, or that a transaction resulted in specific changes to a wallet's Ether or token balance.",
+    link: "Learn more",
+  },
+  {
+    title: "Hardhat Network Helpers",
+    description:
+      "Hardhat Network Helpers provides a convenient JavaScript interface to the JSON-RPC functionality of Hardhat Network.",
+    link: "Learn more",
+  },
+]

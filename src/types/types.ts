@@ -58,3 +58,9 @@ export type Plugins = {
   title: string
   component: React.ComponentType
 }
+
+export type Docs = {
+  title: string
+  description: string
+  link: string
+}

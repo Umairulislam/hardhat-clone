@@ -4,9 +4,9 @@ const documentationSubmenu = [
   {
     heading: "Hardhat Runner",
     menus: [
-      { label: "Overview", to: "/docs/hardhat-runner/overview" },
-      { label: "Installation", to: "/docs/hardhat-runner/installation" },
-      { label: "Quick start", to: "/docs/hardhat-runner/quick-start" },
+      { label: "Overview", to: "/hardhat-runner/docs/getting-started#overview" },
+      { label: "Installation", to: "/hardhat-runner/docs/getting-started#installation" },
+      { label: "Quick start", to: "/hardhat-runner/docs/getting-started#quick-start" },
     ],
   },
   {
@@ -130,6 +130,7 @@ const Sidebar = () => {
                 <li key={j}>
                   <NavLink
                     to={menu.to}
+                    end
                     className={({ isActive }) =>
                       isActive
                         ? "text-link-dark dark:text-link-light"

@@ -1,12 +1,14 @@
 import { createBrowserRouter } from "react-router"
 import {
-  Documentation,
-  Home,
+  DocsPage,
+  HomePage,
   HomeLayout,
   PluginDetails,
-  Plugins,
+  PluginsPage,
   PluginsLayout,
   Tutorial,
+  DocsLayout,
+  DocDetails,
 } from "../pages"
 
 const router = createBrowserRouter([
@@ -16,7 +18,7 @@ const router = createBrowserRouter([
     children: [
       {
         index: true,
-        Component: Home,
+        Component: HomePage,
       },
       {
         path: "hardhat-runner/plugins",
@@ -24,12 +26,19 @@ const router = createBrowserRouter([
         children: [
           {
             index: true,
-            Component: Plugins,
+            Component: PluginsPage,
           },
           { path: ":pluginId", Component: PluginDetails },
         ],
       },
-      { path: "docs", Component: Documentation },
+      {
+        path: "hardhat-runner/docs",
+        Component: DocsLayout,
+        children: [
+          { index: true, Component: DocsPage },
+          { path: "getting-started", Component: DocDetails },
+        ],
+      },
       { path: "tutorial", Component: Tutorial },
     ],
   },

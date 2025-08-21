@@ -17,7 +17,7 @@ const navItems = [
   { label: "Home", to: "/", exact: true },
   { label: "Tools", to: "/#tools" },
   { label: "Plugins", to: "/hardhat-runner/plugins" },
-  { label: "Documentation", to: "/docs" },
+  { label: "Documentation", to: "/hardhat-runner/docs" },
   { label: "Tutorial", to: "/tutorial" },
 ]
 
