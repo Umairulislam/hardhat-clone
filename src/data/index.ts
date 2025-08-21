@@ -71,6 +71,14 @@ import PluginVyper from "../pages/plugins/PluginVyper"
 import PluginWeb3 from "../pages/plugins/PluginWeb3"
 import PluginWeb3Legacy from "../pages/plugins/PluginWeb3Legacy"
 import PluginWeb3V4 from "../pages/plugins/PluginWeb3V4"
+import Boilerplate from "../pages/tutorial/Boilerplate"
+import CompileContracts from "../pages/tutorial/CompileContracts"
+import DebugNetwork from "../pages/tutorial/DebugNetwork"
+import Deploy from "../pages/tutorial/Deploy"
+import FinalThoughts from "../pages/tutorial/FinalThoughts"
+import NewProject from "../pages/tutorial/NewProject"
+import SetupEnvironment from "../pages/tutorial/SetupEnvironment"
+import TestContracts from "../pages/tutorial/TestContracts"
 
 import type {
   Brands,
@@ -81,6 +89,7 @@ import type {
   Plugins,
   Testimonials,
   Tools,
+  Tutorials,
 } from "../types/types"
 
 export const tools: Tools[] = [
@@ -832,3 +841,38 @@ export const docs: Docs[] = [
     link: "Learn more",
   },
 ]
+
+export const tutorials: Record<string, Tutorials> = {
+  "setting-up-the-environment": {
+    title: "Setting up the environment",
+    component: SetupEnvironment,
+  },
+  "creating-a-new-hardhat-project": {
+    title: "Creating a new Hardhat project",
+    component: NewProject,
+  },
+  "writing-and-compiling-contracts": {
+    title: "Writing and compiling contracts",
+    component: CompileContracts,
+  },
+  "testing-contracts": {
+    title: "Testing contracts",
+    component: TestContracts,
+  },
+  "debugging-with-hardhat-network": {
+    title: "Debugging with Hardhat Network",
+    component: DebugNetwork,
+  },
+  "deploying-to-a-live-network": {
+    title: "Deploying to a live network",
+    component: Deploy,
+  },
+  "boilerplate-project": {
+    title: "Boilerplate Project",
+    component: Boilerplate,
+  },
+  "final-thoughts": {
+    title: "Final Thoughts",
+    component: FinalThoughts,
+  },
+}

@@ -1,14 +1,16 @@
 import { createBrowserRouter } from "react-router"
 import {
-  DocsPage,
   HomePage,
   HomeLayout,
   PluginDetails,
   PluginsPage,
   PluginsLayout,
-  Tutorial,
+  DocsPage,
   DocsLayout,
   DocDetails,
+  TutorialOverview,
+  TutorialLayout,
+  TutorialDetails,
 } from "../pages"
 
 const router = createBrowserRouter([
@@ -39,7 +41,14 @@ const router = createBrowserRouter([
           { path: "getting-started", Component: DocDetails },
         ],
       },
-      { path: "tutorial", Component: Tutorial },
+      {
+        path: "tutorial",
+        Component: TutorialLayout,
+        children: [
+          { index: true, Component: TutorialOverview },
+          { path: ":tutorialId", Component: TutorialDetails },
+        ],
+      },
     ],
   },
 ])

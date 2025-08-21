@@ -18,6 +18,11 @@ export { default as iterationDark } from "./images/iteration-dark.svg"
 export { default as iterationLight } from "./images/iteration-light.svg"
 export { default as communityDark } from "./images/community-dark.svg"
 export { default as communityLight } from "./images/community-light.svg"
+export { default as hardhatTutorial } from "./images/hardhat-tutorial.svg"
+export { default as connectWallet } from "./images/connect-wallet.webp"
+export { default as hardhatToken } from "./images/hardhat-token.webp"
+export { default as tokenTransfer } from "./images/token-transfer.webp"
+export { default as coolHardhat } from "./images/cool-hardhat.svg"
 
 // Brands
 export { default as decentraland } from "./images/decentraland.webp"

@@ -120,7 +120,7 @@ const documentationSubmenu = [
 
 const Sidebar = () => {
   return (
-    <section className="hidden lg:block fixed left-0 top top-24 border-border h-[calc(100vh-100px)] w-sm p-10 bg-white dark:bg-bg-dark overflow-y-auto">
+    <section className="hidden lg:block fixed left-0 top top-24 border-r border-border h-[calc(100vh-100px)] w-sm p-10 bg-white dark:bg-bg-dark overflow-y-auto">
       <ul className="flex flex-col gap-4 text-black dark:text-gray">
         {documentationSubmenu.map((section, i) => (
           <div key={i}>

@@ -64,3 +64,8 @@ export type Docs = {
   description: string
   link: string
 }
+
+export type Tutorials = {
+  title: string
+  component: React.ComponentType
+}
