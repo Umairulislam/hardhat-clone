@@ -24,9 +24,9 @@ const navItems = [
 
 // Social media links
 const socialLinks = [
-  { icon: <FaGithub />, href: "" },
-  { icon: <FaXTwitter />, href: "" },
-  { icon: <FaDiscord />, href: "" },
+  { icon: <FaGithub />, href: "https://github.com/NomicFoundation/hardhat" },
+  { icon: <FaXTwitter />, href: "https://x.com/HardhatHQ" },
+  { icon: <FaDiscord />, href: "https://discord.com/invite/TETZs2KK4k" },
 ]
 
 // Tools submenu items
@@ -229,7 +229,12 @@ const Header = () => {
       {/* Github link for mobile */}
       {isMobile && (
         <li>
-          <a href="" className="flex items-center">
+          <a
+            href="https://github.com/NomicFoundation/hardhat"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="flex items-center"
+          >
             Github <GoArrowUpRight />
           </a>
         </li>
@@ -241,7 +246,13 @@ const Header = () => {
   const renderSocialIcons = () => (
     <div className="flex gap-4 text-lg">
       {socialLinks.map(({ icon, href }, index) => (
-        <a key={index} href={href}>
+        <a
+          key={index}
+          href={href}
+          target="_blank"
+          rel="noopener noreferrer"
+          className="hover:text-gray"
+        >
           {icon}
         </a>
       ))}

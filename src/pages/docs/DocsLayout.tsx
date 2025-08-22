@@ -3,7 +3,7 @@ import { ScrollToHash } from "../../components"
 
 const DocsLayout = () => {
   return (
-    <main className="pt-28">
+    <main className="pt-24">
       <section className="container mx-auto">
         <ScrollToHash />
         <Outlet />

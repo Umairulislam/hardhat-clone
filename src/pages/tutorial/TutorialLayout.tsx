@@ -3,7 +3,7 @@ import { ScrollToHash, TutorialSidebar } from "../../components"
 
 const TutorialLayout = () => {
   return (
-    <main className="pt-28">
+    <main className="pt-24">
       <section>
         <TutorialSidebar />
       </section>
