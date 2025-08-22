@@ -1,0 +1,95 @@
+@import "tailwindcss";
+@custom-variant dark (&:where(.dark, .dark *));
+
+@theme {
+  --color-bg-dark: #181a1f; /* Dark theme background */
+  --color-bg-light: #ffffff; /* Light theme background */
+
+  --color-primary: #fff100; /* Primary brand color (buttons, highlights) */
+  --color-primary-hover: #fff787; /* Hover state for primary */
+
+  --color-muted: #6e6f70; /* Muted / secondary text color */
+  --color-border: #4a4d54; /* Borders, dividers */
+
+  --color-gray: #b0b2b5; /* Default text on dark theme */
+
+  --color-link-dark: #d39f24; /* Link color in dark theme */
+  --color-link-light: #edcf00; /* Link color in light theme */
+}
+
+@layer base {
+}
+
+@layer utilities {
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Inter", sans-serif;
+    scroll-behavior: smooth;
+  }
+
+  u {
+    @apply no-underline text-link-dark dark:text-link-light cursor-pointer hover:opacity-75;
+  }
+
+  .section_padding {
+    @apply p-4 md:py-6 md:px-12 xl:py-10 xl:px-20;
+  }
+
+  .btn {
+    @apply px-6 py-3 cursor-pointer rounded-sm text-sm transition-colors duration-300;
+  }
+
+  .btn_primary {
+    @apply bg-primary text-black  hover:bg-primary-hover;
+  }
+
+  .btn_secondary {
+    @apply bg-transparent border border-gray-400 hover:bg-[#b497d3fb];
+  }
+
+  .primary_heading {
+    @apply text-xl md:text-2xl tracking-widest uppercase font-medium;
+  }
+
+  .secondary_heading {
+    @apply text-2xl md:text-4xl xl:text-5xl font-bold;
+  }
+
+  .tertiary_heading {
+    @apply text-xl md:text-3xl tracking-wide font-bold;
+  }
+
+  .swiper-button-next,
+  .swiper-button-prev {
+    @apply border-border border rounded-full p-6 absolute top-36 hover:shadow-lg hover:shadow-gray-600 hover:-translate-y-1 transition-all duration-300 shadow-lg;
+  }
+  .swiper-button-next::after,
+  .swiper-button-prev::after {
+    --swiper-navigation-size: 16px;
+    @apply text-muted;
+  }
+}
+
+.animate_up_down {
+  animation: up_down 5s ease-in-out infinite;
+}
+@keyframes up_down {
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-50px);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
+.box_shadow_dark {
+  box-shadow: rgba(0, 0, 0, 0.2) 0px 5px 15px;
+}
+.box_shadow_light {
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 5px 15px;
+}

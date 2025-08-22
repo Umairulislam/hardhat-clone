@@ -1,8 +1,41 @@
-# React + Vite
-
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
-
-Currently, two official plugins are available:
-
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+src/
+├── assets/
+│ ├── images/
+│ ├── icons/
+│
+├── components/ # shared UI components (Navbar, Button, Footer, etc.)
+│
+├── context/
+│ └── ThemeContext.tsx
+│
+├── constants/ # static config (menus, testimonials, etc.)
+│ └── index.ts
+│
+├── pages/
+│ ├── docs/
+│ │ └── DocsPage.tsx
+│ │
+│ ├── home/
+│ │ ├── HomePage.tsx
+│ │ └── HomeLayout.tsx
+│ │
+│ ├── plugins/
+│ │ ├── PluginDetailsPage.tsx
+│ │ ├── PluginsPage.tsx
+│ │ ├── PluginsLayout.tsx
+│ │ └── components/
+│ │ ├── PluginCard.tsx
+│ │ └── PluginSidebar.tsx
+│ │
+│ └── tutorial/
+│ └── TutorialPage.tsx
+│
+├── routes/
+│ └── routes.tsx
+│
+├── types/
+│ └── index.ts
+│
+├── App.css
+├── App.tsx
+├── main.tsx
