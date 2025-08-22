@@ -1,16 +1,9 @@
-import { useParams } from "react-router"
 import { Sidebar } from "../../components"
 import Installation from "./Installation"
 import Overview from "./Overview"
 import QuickStart from "./QuickStart"
 
 function DocDetails() {
-  //   const { DocId } = useParams<{ DocId: string }>()
-
-  //   if (!DocId) {
-  //     return <div>Documentation not found</div>
-  //   }
-
   return (
     <main>
       <section>
