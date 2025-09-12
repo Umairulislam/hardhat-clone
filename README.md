@@ -58,4 +58,6 @@ Follow these steps to run the project locally:
 This project is for educational purposes only.
 All rights for the original Hardhat website design belong to the [Nomic Foundation](https://hardhat.org/).
 
-### 🌟 Built with ❤️ using React, TypeScript, and Tailwind CSS.
+## 👨‍💼 Author
+
+Crafted with care by **Engr. Umair Ul Islam**
