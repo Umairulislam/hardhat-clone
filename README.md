@@ -21,17 +21,17 @@ This project replicates the look and feel of the Hardhat documentation site, whi
 
 ## 🛠️ Tech Stack
 
-![React](https://img.shields.io/badge/React-20232A?logo=react&logoColor=61DAFB)  
-![TypeScript](https://img.shields.io/badge/TypeScript-3178C6?logo=typescript&logoColor=white)  
-![TailwindCSS](https://img.shields.io/badge/Tailwind_CSS-38B2AC?logo=tailwind-css&logoColor=white)  
-![React Router](https://img.shields.io/badge/React_Router-CA4245?logo=react-router&logoColor=white)  
-![Vite](https://img.shields.io/badge/Vite-646CFF?logo=vite&logoColor=white)  
-![Netlify](https://img.shields.io/badge/Netlify-00C7B7?logo=netlify&logoColor=white)
+![React](https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB)  
+![TypeScript](https://img.shields.io/badge/TypeScript-3178C6?style=for-the-badge&logo=typescript&logoColor=white)  
+![TailwindCSS](https://img.shields.io/badge/Tailwind_CSS-38B2AC?style=for-the-badge&logo=tailwind-css&logoColor=white)  
+![React Router](https://img.shields.io/badge/React_Router-CA4245?style=for-the-badge&logo=react-router&logoColor=white)  
+![Vite](https://img.shields.io/badge/Vite-646CFF?style=for-the-badge&logo=vite&logoColor=white)  
+![Netlify](https://img.shields.io/badge/Netlify-00C7B7?style=for-the-badge&logo=netlify&logoColor=white)
 
 **UI Enhancements:**  
-![React Code Blocks](https://img.shields.io/badge/React_Code_Blocks-282C34?logo=react&logoColor=61DAFB)  
-![Swiper](https://img.shields.io/badge/Swiper-6332F6?logo=swiper&logoColor=white)  
-![React Icons](https://img.shields.io/badge/React_Icons-E91E63?logo=react&logoColor=white)
+![React Code Blocks](https://img.shields.io/badge/React_Code_Blocks-282C34?style=for-the-badge&logo=react&logoColor=61DAFB)  
+![Swiper](https://img.shields.io/badge/Swiper-6332F6?style=for-the-badge&logo=swiper&logoColor=white)  
+![React Icons](https://img.shields.io/badge/React_Icons-E91E63?style=for-the-badge&logo=react&logoColor=white)
 
 ## 🏁 Getting Started
 
