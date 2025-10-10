@@ -37,6 +37,8 @@ const Features = () => {
               <img
                 src={theme === "dark" ? feature.imageDark : feature.imageLight}
                 alt={feature.title1}
+                width={450}
+                height={400}
               />
             </div>
           </div>

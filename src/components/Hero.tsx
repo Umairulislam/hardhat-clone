@@ -22,18 +22,22 @@ const Hero = () => {
 
       <figure className="max-w-xl">
         <div className="relative animate_up_down">
-          <img src={theme === "dark" ? ethereumDark : ethereumLight} alt="ethereum" />
+          <img
+            src={theme === "dark" ? ethereumDark : ethereumLight}
+            alt="ethereum"
+            fetchPriority="high"
+          />
           <div className="absolute top-32 right-6">
-            <img src={heHead} alt="heHead" />
+            <img src={heHead} alt="heHead" fetchPriority="high" />
           </div>
           <div className="absolute top-60 right-20">
-            <img src={heEyes} alt="heEyes" />
+            <img src={heEyes} alt="heEyes" fetchPriority="high" />
           </div>
           <div className="absolute top-32 left-6">
-            <img src={sheHead} alt="sheHead" />
+            <img src={sheHead} alt="sheHead" fetchPriority="high" />
           </div>
           <div className="absolute top-60 left-20">
-            <img src={sheEyes} alt="sheEyes" />
+            <img src={sheEyes} alt="sheEyes" fetchPriority="high" />
           </div>
         </div>
       </figure>

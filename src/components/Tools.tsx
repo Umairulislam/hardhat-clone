@@ -40,6 +40,9 @@ const ToolSection = () => {
               <div>
                 <img
                   src={tool.icon}
+                  alt={tool.name}
+                  width={74}
+                  height={74}
                   className={`rounded-sm ${
                     activeTool.id === tool.id
                       ? "shadow-none"
