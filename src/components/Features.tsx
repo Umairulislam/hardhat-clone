@@ -39,6 +39,7 @@ const Features = () => {
                 alt={feature.title1}
                 width={450}
                 height={400}
+                loading="lazy"
               />
             </div>
           </div>
