@@ -22,11 +22,11 @@ const Features = () => {
           >
             <div className="max-w-md w-full flex flex-col items-start gap-10">
               <div>
-                <h1 className="secondary_heading">{feature.title1}</h1>
+                <h2 className="secondary_heading">{feature.title1}</h2>
                 <p className="mt-5 text-muted text-base md:text-lg">{feature.description1}</p>
               </div>
               <div>
-                <h1 className="secondary_heading">{feature.title2}</h1>
+                <h2 className="secondary_heading">{feature.title2}</h2>
                 <p className="mt-5 text-muted text-base md:text-lg">{feature.description2}</p>
               </div>
               <div>

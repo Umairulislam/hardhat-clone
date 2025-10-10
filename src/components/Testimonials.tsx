@@ -29,7 +29,7 @@ const Testimonials = () => {
                   />
                 </div>
                 <div>
-                  <h3 className="text-sm">{testimonial.name},</h3>
+                  <h1 className="text-sm">{testimonial.name},</h1>
                   <p className="text-sm mt-1">{testimonial.designation}</p>
                 </div>
                 <div>

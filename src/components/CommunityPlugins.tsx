@@ -5,7 +5,7 @@ const CommunityPlugins = () => {
   return (
     <section id="community-plugins" className="section_padding text-black dark:text-gray">
       <div>
-        <h2 className="text-2xl font-semibold">Community Plugins</h2>
+        <h1 className="text-2xl font-semibold">Community Plugins</h1>
         <div className="mt-8 flex flex-col gap-10">
           {communityPlugins.map((plugin) => (
             <div key={plugin.id} className="flex flex-col gap-3">
